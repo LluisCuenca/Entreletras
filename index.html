@@ -1,8 +1,72 @@
 <!doctype html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#142f30"><meta name="description" content="25 crucigramas y autodefinidos originales en español. Una aventura de palabras, de fácil a experto."><title>Entreletras · Una aventura de palabras</title><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="icon-192.png"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css"><script src="puzzles.js" defer></script><script src="app.js" defer></script></head>
-<body><header class="topbar"><a class="brand" href="./" aria-label="Entreletras, inicio"><span class="brand-icon">e<span>+</span></span>entreletras<span class="brand-dot">.</span></a><span class="edition">25 desafíos · infinitas conexiones</span><button class="icon-button" id="help" aria-label="Cómo jugar">?</button></header>
-<main><aside class="journey"><div class="eyebrow">TU AVENTURA</div><h1>Una letra.<br>Un pequeño logro.</h1><p class="intro">Encuentra las palabras.<br>Disfruta de las conexiones.</p><div class="journey-progress"><div><strong id="total-completed">0 de 25</strong><span>completados</span></div><progress id="overall" max="25" value="0"></progress></div><div class="map-heading"><h2>El recorrido</h2><span>01 — 25</span></div><div id="level-map" class="level-map"></div><p class="save-note" id="save-note">Tu progreso se guarda en este dispositivo.</p></aside>
-<section class="game"><div class="game-heading"><div><div class="eyebrow" id="level-kind"></div><h2 id="level-title"></h2></div><div class="difficulty" id="difficulty"></div></div><div class="game-toolbar"><span id="word-count"></span><div><button id="zoom-out" aria-label="Reducir tablero">−</button><button id="zoom-in" aria-label="Ampliar tablero">+</button><button id="restart" aria-label="Reiniciar este nivel">↺</button></div></div><div id="board-scroll" class="board-scroll"><div id="board" class="board" role="group" aria-label="Tablero de palabras"></div></div><div class="active-clue" aria-live="polite"><button id="prev-clue" aria-label="Pista anterior">‹</button><div><span id="active-label"></span><p id="active-text"></p></div><button id="next-clue" aria-label="Pista siguiente">›</button></div><div class="actions"><button id="check" class="secondary">✓ Comprobar</button><button id="hint" class="secondary">✦ Revelar letra <span id="hint-count"></span></button></div><div id="keyboard" class="keyboard" aria-label="Teclado en pantalla"></div><div id="status" role="status" class="status">Selecciona una casilla y empieza a escribir.</div></section>
-<aside class="clues-panel"><div class="eyebrow">PISTA A PISTA</div><h2 id="clues-title">El hilo de las palabras</h2><div id="clue-list"></div><div class="tip"><span>✦</span><p>Sin prisa. A veces, una sola letra lo cambia todo.</p></div></aside></main>
-<footer><span>Hecho para mentes curiosas.</span><span>Sin cuentas. Sin cronómetro. A tu ritmo.</span></footer>
-<dialog id="modal"><button class="modal-close" aria-label="Cerrar">×</button><div id="modal-content"></div></dialog></body></html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f5f4ee">
+  <meta name="description" content="25 crucigramas y autodefinidos originales en español. De fácil a experto, a tu ritmo.">
+  <title>Entreletras · Crucigramas y autodefinidos</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <script src="puzzles.js" defer></script>
+  <script src="core.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a href="#game" class="skip-link">Ir al juego</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Entreletras, inicio">entreletras<span>.</span></a>
+    <span class="edition">Un rato para tus palabras.</span>
+    <button id="levels" class="levels-button" aria-haspopup="dialog"><span class="desktop-label">El recorrido</span><span class="mobile-label">Niveles</span><span id="total-completed">0 / 25</span><span aria-hidden="true">↗</span></button>
+  </header>
+  <main id="game" tabindex="-1">
+    <section class="game-heading" aria-labelledby="level-title">
+      <div class="title-group"><div class="eyebrow" id="level-kind"></div><h1 id="level-title"></h1></div>
+      <div class="level-navigation"><button id="prev-level" class="icon-button" aria-label="Nivel anterior">‹</button><button id="next-level" class="icon-button" aria-label="Nivel siguiente">›</button></div>
+      <span id="difficulty" class="difficulty"></span>
+    </section>
+    <div class="workspace">
+      <section class="play-area" aria-label="Zona de juego">
+        <div class="game-toolbar">
+          <span id="word-count" class="fill-count"></span>
+          <div class="toolbar-buttons">
+            <button id="zoom-out" class="tool-button" aria-label="Reducir tablero">−</button>
+            <button id="zoom-fit" class="tool-button fit-button" aria-label="Ajustar tablero al espacio disponible">Ajustar</button>
+            <button id="zoom-in" class="tool-button" aria-label="Ampliar tablero">+</button>
+            <span class="tool-separator" aria-hidden="true"></span>
+            <button id="show-clues" class="tool-button" aria-expanded="true" aria-controls="clues-panel">Pistas</button>
+            <button id="options" class="tool-button" aria-label="Opciones de juego" aria-haspopup="dialog">•••</button>
+          </div>
+        </div>
+        <div class="board-viewport" id="board-scroll" tabindex="0" aria-label="Tablero desplazable. Usa las casillas para escribir."><div id="board" class="board" role="group" aria-label="Tablero de palabras"></div></div>
+        <div id="board-guidance" class="board-guidance">Toca una casilla para empezar</div>
+        <div class="play-dock">
+          <div class="active-clue" aria-live="polite" aria-atomic="true">
+            <button id="prev-clue" aria-label="Pista anterior">‹</button>
+            <div><span id="active-label"></span><p id="active-text"></p></div>
+            <button id="next-clue" aria-label="Pista siguiente">›</button>
+          </div>
+          <div class="actions">
+            <button id="undo" class="action-button" aria-label="Deshacer última letra" title="Deshacer (Ctrl o ⌘ Z)">↶ <span>Deshacer</span></button>
+            <button id="check" class="action-button">Comprobar</button>
+            <button id="hint" class="action-button">Revelar letra<span id="hint-count"></span></button>
+          </div>
+          <div id="keyboard" class="keyboard" role="group" aria-label="Teclado en pantalla"></div>
+          <p id="status" class="status" role="status" aria-live="polite">Tu partida se guarda automáticamente.</p>
+          <div id="update-notice" class="update-notice" role="status" hidden><span>Hay una nueva versión disponible.</span><button id="update-app">Actualizar</button></div>
+        </div>
+      </section>
+      <aside class="clues-panel" id="clues-panel" aria-labelledby="clues-title">
+        <div class="panel-heading"><div><div class="eyebrow">PISTA A PISTA</div><h2 id="clues-title">Las palabras</h2></div><button id="close-clues" class="icon-button" aria-label="Ocultar lista de pistas">×</button></div>
+        <div id="clue-list" class="clue-list"></div>
+        <p class="panel-note">Selecciona una definición para ir a su palabra.</p>
+      </aside>
+    </div>
+    <div id="save-warning" class="save-warning" role="alert" hidden></div>
+  </main>
+  <dialog id="modal" aria-labelledby="modal-title"><button class="modal-close icon-button" aria-label="Cerrar ventana">×</button><div id="modal-content"></div></dialog>
+  <noscript>Activa JavaScript en el navegador para jugar a Entreletras.</noscript>
+</body>
+</html>

@@ -254,7 +254,8 @@ SINCOPA|Supresión de uno o varios sonidos dentro de una palabra
 METONIMIA|Designación por un término relacionado, como el autor por la obra'''
 
 def norm(s):
-    return ''.join(c for c in unicodedata.normalize('NFD',s.replace(' ','').upper()) if unicodedata.category(c)!='Mn')
+    text = unicodedata.normalize('NFD', s.replace(' ', '').upper()).replace('N\u0303', 'Ñ')
+    return ''.join(c for c in text if unicodedata.category(c) != 'Mn')
 
 def generate(entries,seed):
     best=None
