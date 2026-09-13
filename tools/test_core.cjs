@@ -3,9 +3,32 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 const core = require('../core.js');
+const { createHash } = require('node:crypto');
 const scope = { window: {} };
 vm.runInNewContext(fs.readFileSync(require.resolve('../puzzles.js'), 'utf8'), scope);
 const levels = scope.window.PUZZLES;
+
+test('The original 25 puzzles keep exactly the same ids, grids, answers and definitions', () => {
+  const original = levels.filter(level => level.id <= 25).sort((a, b) => a.id - b.id);
+  assert.equal(original.length, 25);
+  assert.equal(createHash('sha256').update(JSON.stringify(original)).digest('hex'), '3ef488db45bc9a785480f6ad1a4a49ba2c9aa0a9a2295089893fae442cf68f2b');
+  for (const level of original) {
+    const cells = core.index(level), p = [...cells.keys()][0];
+    const savedById = { [level.id]: { letters: { [p]: cells.get(p).answer }, hints: 2, selectedWord: 0, selectedCell: p } };
+    const restored = core.restore(levels.find(item => item.id === level.id), savedById[level.id]);
+    assert.equal(restored.letters[p], cells.get(p).answer); assert.equal(restored.hints, 2);
+    assert.equal(restored.selectedCell, p);
+  }
+});
+test('Display order has 100 alternating levels in five increasing difficulty groups', () => {
+  assert.equal(new Set(levels.map(level => level.id)).size, 100);
+  levels.forEach((level, i) => {
+    assert.equal(level.type, i % 2 === 0 ? 'crossword' : 'arrowword');
+    assert.equal(level.difficulty, Math.floor(i / 20) + 1);
+  });
+  assert.equal(levels.findIndex(level => level.id === 6), 21);
+  assert.equal(levels[99].title, 'Cien conexiones');
+});
 
 test('Spanish input preserves Ñ, including decomposed input, while removing accents', () => {
   assert.equal(core.normalize('niño'), 'NIÑO');
@@ -33,8 +56,8 @@ test('Undoing a revealed letter does not refund the hint count', () => {
   core.edit(game, cells, p, cells.get(p).answer, history); game.hints++;
   core.undo(game, history); assert.equal(game.letters[p], undefined); assert.equal(game.hints, 1);
 });
-test('All 25 levels distinguish incomplete, incorrect, and solved boards and protect completed games', () => {
-  assert.equal(levels.length, 25);
+test('All 100 levels distinguish incomplete, incorrect, and solved boards and protect completed games', () => {
+  assert.equal(levels.length, 100);
   for (const level of levels) {
     const cells = core.index(level), game = core.restore(level), history = [];
     assert.equal(core.solved(cells, game.letters), false);

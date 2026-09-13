@@ -11,7 +11,7 @@ function worker() {
     self: { registration: { scope: 'https://example.test/Entreletras/' }, addEventListener: (type, cb) => handlers[type] = cb, skipWaiting: async () => {}, clients: { claim: async () => {} } },
     caches: {
       open: async () => ({ addAll: async entries => requests.push(...entries), match: async () => ({ cached: true }) }),
-      keys: async () => ['another-app', 'entreletras:/other/:v1', 'entreletras:/Entreletras/:v1', 'entreletras:/Entreletras/:v4'],
+      keys: async () => ['another-app', 'entreletras:/other/:v1', 'entreletras:/Entreletras/:v1', 'entreletras:/Entreletras/:v5'],
       delete: async key => removed.push(key)
     },
     fetch: async () => { networkCalls++; throw new Error('Offline'); }

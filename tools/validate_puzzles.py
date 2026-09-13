@@ -1,11 +1,24 @@
 import json
 from pathlib import Path
+from create_puzzles import norm
 root=Path(__file__).resolve().parents[1]
 levels=json.loads((root/'puzzles.js').read_text().removeprefix('window.PUZZLES = ').strip().removesuffix(';'))
-assert len(levels)==25
+assert len(levels)==100
+assert len({l['id'] for l in levels}) == 100
+assert len({l['title'] for l in levels}) == 100
+assert sorted(l['id'] for l in levels) == list(range(1, 101))
+assert len({tuple(sorted(w['answer'] for w in l['words'])) for l in levels}) == 100
+by_id = {level['id']: level for level in levels}
+for i, block in enumerate((root / 'tools/new_puzzles.txt').read_text().split('===')):
+ header, *lines = block.strip().splitlines()
+ difficulty, title = header.split('|', 1)
+ level = by_id[26 + i]
+ assert level['title'] == title and level['difficulty'] == int(difficulty)
+ expected = {(norm(line.split('|')[0]), line.split('|')[1]) for line in lines}
+ assert {(word['answer'], word['clue']) for word in level['words']} == expected, title
 for n,l in enumerate(levels,1):
- assert l['id']==n and l['type']==('crossword' if n%2 else 'arrowword')
- assert l['difficulty']==(n-1)//5+1
+ assert l['type']==('crossword' if n%2 else 'arrowword')
+ assert l['difficulty']==(n-1)//20+1
  cells={}; owners={}; clues=[]; paths=[]
  for i,w in enumerate(l['words']):
   assert w['answer'].isalpha() and w['answer'].isupper() and w['clue']

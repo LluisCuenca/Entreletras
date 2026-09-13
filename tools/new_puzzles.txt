@@ -1,0 +1,750 @@
+1|Buenos días
+CARA|Parte de la cabeza donde están los ojos y la boca
+MANO|Parte del cuerpo con la que agarramos
+PEINE|Utensilio con púas para ordenar el pelo
+JABON|Producto que usamos para lavarnos
+TOALLA|Tela que usamos para secarnos
+ESPEJO|Superficie en la que vemos nuestro reflejo
+DUCHA|Baño bajo un chorro de agua
+===1|En la mochila
+LIBRO|Objeto con páginas que podemos leer
+LAPIZ|Utensilio de escritura que se puede borrar con goma
+GOMA|Sirve para borrar lo escrito con lápiz
+REGLA|Instrumento recto para medir y trazar líneas
+PAPEL|Material sobre el que escribimos
+ESTUCHE|Funda en la que se guardan lápices
+TIJERAS|Utensilio de dos hojas para cortar
+===1|Día de lluvia
+NUBE|Masa de pequeñas gotas suspendida en el cielo
+LLUVIA|Agua que cae de las nubes en gotas
+CHARCO|Agua acumulada en un pequeño hueco del suelo
+BOTAS|Calzado que cubre el tobillo y parte de la pierna
+VIENTO|Aire en movimiento
+RAYO|Descarga eléctrica visible durante una tormenta
+TRUENO|Ruido que acompaña al relámpago
+===1|El armario
+CAMISA|Prenda con cuello y botones que cubre el torso
+FALDA|Prenda que cuelga de la cintura sin dividirse en perneras
+ABRIGO|Prenda exterior para protegerse del frío
+GORRO|Prenda que cubre la cabeza y no suele tener ala
+BUFANDA|Tira de tela que se coloca alrededor del cuello
+GUANTE|Prenda que cubre la mano y sus dedos
+ZAPATO|Calzado que suele quedar por debajo del tobillo
+===1|La frutería
+MANZANA|Fruta del árbol llamado manzano
+PLATANO|Fruta alargada de piel amarilla al madurar
+NARANJA|Cítrico cuyo nombre también es un color
+MELON|Fruta grande de corteza gruesa y pulpa dulce
+SANDIA|Fruta grande de pulpa roja y muchas semillas negras
+CEREZA|Pequeña fruta roja con hueso y rabillo
+LIMON|Cítrico amarillo de sabor ácido
+===1|Mi familia
+MADRE|Mujer con relación a sus hijos
+PADRE|Hombre con relación a sus hijos
+ABUELA|Madre de uno de tus padres
+HERMANO|Persona que comparte contigo padre o madre, en masculino
+PRIMO|Hijo de tu tío o de tu tía
+SOBRINA|Hija de tu hermano o hermana
+NIETO|Hijo de tu hijo o hija
+===1|En la granja
+VACA|Animal que muge y da leche
+CERDO|Animal de granja que gruñe
+OVEJA|Animal que se cría por su lana
+CABRA|Animal con cuernos que suele trepar por terrenos rocosos
+GALLO|Ave de corral cuyo canto anuncia el amanecer
+PATO|Ave acuática de pico ancho
+BURRO|Animal de carga de orejas largas que rebuzna
+===1|Contar y medir
+UNIDAD|Cada elemento que contamos por separado
+SIETE|Número de días que tiene una semana
+CUATRO|Número de lados de un cuadrado
+DECENA|Conjunto de diez unidades
+METRO|Unidad de longitud equivalente a cien centímetros
+HORA|Periodo de sesenta minutos
+LITRO|Medida de capacidad habitual en botellas de agua
+===1|Un paseo por el mar
+OLA|Elevación del agua que avanza por la superficie del mar
+ARENA|Granos pequeños que forman muchas playas
+BARCO|Vehículo que navega por el agua
+CONCHA|Cubierta dura de muchos moluscos
+FARO|Torre cuya luz orienta a los navegantes
+SALADO|Sabor característico del agua de mar
+GAVIOTA|Ave marina habitual en puertos y playas
+===1|Pequeños movimientos
+SALTAR|Elevarse del suelo con un impulso
+CORRER|Desplazarse a pie más deprisa que andando
+NADAR|Avanzar por el agua con el cuerpo
+BAILAR|Moverse siguiendo el ritmo de la música
+GIRAR|Dar vueltas alrededor de un eje
+SUBIR|Ir de un lugar más bajo a otro más alto
+BAJAR|Ir de un lugar más alto a otro más bajo
+===1|En el desayuno
+CAFE|Bebida que se prepara con granos tostados y molidos
+CACAO|Ingrediente principal del chocolate
+MIEL|Sustancia dulce que producen las abejas
+TOSTADA|Rebanada de pan dorada por el calor
+ZUMO|Líquido que se extrae de una fruta
+TAZA|Recipiente con asa para tomar una bebida
+MANTECA|Grasa de cerdo utilizada en cocina y repostería
+===1|Una tarde tranquila
+CUENTO|Narración breve, frecuente en libros infantiles
+DIBUJO|Imagen hecha con líneas sobre una superficie
+PUZLE|Juego de encajar piezas para formar una imagen
+PINTAR|Aplicar colores sobre una superficie
+MUSICA|Arte que combina sonidos y silencios
+RADIO|Medio que transmite programas sonoros por emisoras
+SIESTA|Sueño breve que se toma después de comer
+===1|Colores alrededor
+ROJO|Color de un tomate maduro
+VERDE|Color habitual de las hojas
+AZUL|Color del cielo despejado durante el día
+NEGRO|Color del carbón
+BLANCO|Color de la nieve limpia
+MORADO|Color de muchas violetas
+GRIS|Color que resulta al mezclar blanco y negro
+===1|Pequeñas cosas
+LLAVE|Objeto que se introduce en una cerradura para abrirla
+MONEDA|Pieza de dinero, normalmente metálica
+RELOJ|Objeto que indica la hora
+VELA|Cilindro de cera con una mecha para alumbrar
+CAJA|Recipiente que suele tener tapa
+CESTA|Recipiente tejido, a menudo con asa
+CUERDA|Conjunto de hilos retorcidos que sirve para atar
+===1|Bajo los árboles
+NIDO|Refugio donde muchas aves ponen sus huevos
+PLUMA|Cada una de las piezas que cubren el cuerpo de las aves
+HORMIGA|Insecto pequeño que vive en colonias
+CARACOL|Animal que lleva una concha en espiral
+ORUGA|Larva alargada que se convierte en mariposa
+SETAS|Hongos de pie y sombrero, en plural
+MUSGO|Planta pequeña que forma tapices en lugares húmedos
+===2|Un día en la oficina
+CARPETA|Objeto que agrupa y protege documentos
+ARCHIVO|Conjunto organizado de documentos
+AGENDA|Cuaderno para anotar citas y tareas
+TECLADO|Conjunto de teclas para introducir texto
+PANTALLA|Superficie donde un ordenador muestra imágenes
+RATON|Dispositivo que mueve el puntero en el ordenador
+GRAPADORA|Utensilio que une hojas con pequeñas piezas metálicas
+IMPRESORA|Máquina que pasa texto o imágenes al papel
+===2|De compras
+TICKET|Comprobante impreso de una compra
+CESTA|Recipiente que llevas por la tienda para reunir productos
+OFERTA|Venta de un producto a un precio rebajado
+CAJERO|Persona que cobra las compras en una tienda
+PRECIO|Cantidad de dinero que cuesta algo
+CAMBIO|Dinero que se devuelve cuando pagas de más
+ETIQUETA|Pieza que identifica un producto y muestra sus datos
+ENVASE|Recipiente que contiene un producto para su venta
+===2|Sobre ruedas
+PEDAL|Pieza que se acciona con el pie en una bicicleta
+CADENA|Conjunto de eslabones que transmite el movimiento al pedalear
+FRENO|Mecanismo que reduce o detiene la marcha
+MANILLAR|Barra con la que se dirige una bicicleta
+SILLIN|Asiento estrecho de una bicicleta
+CASCO|Protección rígida que cubre la cabeza
+RUEDA|Pieza circular que gira sobre un eje
+RADIO|Cada varilla que une el centro de una rueda con su aro
+===2|En la estación
+ANDEN|Plataforma desde la que se sube al tren
+VAGON|Cada vehículo que forma parte de un tren
+TAQUILLA|Ventanilla donde se venden billetes
+HORARIO|Relación de las horas de salida o llegada
+DESTINO|Lugar al que se dirige un viaje
+RETRASO|Llegada después de la hora prevista
+TRANSBORDO|Cambio de un transporte a otro durante un viaje
+CONSIGNA|Lugar donde se guarda temporalmente el equipaje
+===2|Al levantar el telón
+ACTOR|Persona que interpreta a un personaje, en masculino
+ACTRIZ|Mujer que interpreta a un personaje
+TELON|Cortina grande que cubre el escenario
+ESCENA|Parte de una obra teatral o lugar donde se representa
+BUTACA|Asiento individual de un teatro
+ENSAYO|Práctica previa a una representación
+GUION|Texto que recoge diálogos e indicaciones de una obra
+APLAUSO|Sonido de palmas con el que se expresa aprobación
+===2|Vacaciones de invierno
+NIEVE|Precipitación formada por cristales de hielo
+ESQUI|Tabla alargada para deslizarse sobre la nieve
+TRINEO|Vehículo con patines que se desliza por nieve o hielo
+CHAQUETA|Prenda de abrigo que cubre el torso
+CHIMENEA|Conducto que da salida al humo de una casa
+ESCARCHA|Capa de cristales de hielo que se forma sobre superficies frías
+REFUGIO|Lugar que ofrece protección en la montaña
+AVALANCHA|Gran masa de nieve que cae por una pendiente
+===2|Herramientas de jardín
+RASTRILLO|Herramienta dentada para recoger hojas o alisar tierra
+PALA|Herramienta con una lámina ancha para mover tierra
+MACETA|Recipiente donde se cultiva una planta
+ABONO|Sustancia que aporta nutrientes al suelo
+PODAR|Cortar ramas para cuidar o dar forma a una planta
+MANGUERA|Tubo flexible que transporta agua
+ESQUEJE|Trozo de una planta que puede enraizar para reproducirla
+COMPOST|Abono obtenido al descomponer materia orgánica
+===2|Sabores del horno
+LEVADURA|Ingrediente que ayuda a fermentar una masa
+AMASAR|Trabajar una mezcla con las manos hasta darle consistencia
+RODILLO|Cilindro que sirve para extender una masa
+GALLETAS|Pequeñas piezas dulces y crujientes horneadas
+BIZCOCHO|Dulce de masa esponjosa hecho al horno
+CORTEZA|Capa exterior más dura de una pieza de pan
+MIGA|Parte blanda del interior del pan
+HOJALDRE|Masa que al hornearse se separa en láminas finas
+===2|La ciudad despierta
+SEMAFORO|Señal luminosa que regula el paso en los cruces
+ROTONDA|Intersección circular de calles o carreteras
+PEATON|Persona que se desplaza a pie por una vía
+TRAFICO|Circulación de vehículos por las vías
+PORTAL|Entrada común de un edificio de viviendas
+BALCON|Plataforma que sobresale de una fachada
+QUIOSCO|Puesto pequeño de venta, habitual para prensa
+FUENTE|Construcción de la que brota agua
+===2|Animales del bosque
+CIERVO|Mamífero cuyos machos suelen tener astas ramificadas
+ZORRO|Animal de hocico afilado y cola espesa, famoso por su astucia
+JABALI|Pariente salvaje del cerdo
+TEJON|Mamífero de cara blanca con franjas oscuras
+ERIZO|Mamífero pequeño cubierto de púas
+BUHO|Ave rapaz nocturna de ojos grandes
+LOBO|Cánido salvaje que aúlla
+CASTOR|Roedor que construye diques con ramas
+===2|De hilo en hilo
+AGUJA|Pieza fina con ojo por donde se pasa el hilo
+DEDAL|Protección que se pone en un dedo para coser
+BOBINA|Soporte alrededor del que se enrolla hilo
+COSTURA|Unión de dos telas hecha con puntadas
+BOTON|Pieza que se introduce en un ojal para cerrar una prenda
+CREMALLERA|Cierre formado por dos filas de dientes que se engranan
+PATRON|Modelo de papel que sirve para cortar una prenda
+REMENDAR|Reparar una tela rota con costura o parches
+===2|Al otro lado del objetivo
+CAMARA|Aparato que toma fotografías
+ENFOQUE|Ajuste que permite obtener una imagen nítida
+RETRATO|Imagen que representa a una persona
+PAISAJE|Vista de un terreno o representación de esa vista
+TRIPODE|Soporte de tres patas para una cámara
+FLASH|Destello que ilumina al tomar una fotografía
+LENTE|Pieza transparente que desvía los rayos de luz
+ALBUM|Libro en el que se reúnen fotografías
+===2|Juegos de mesa
+TABLERO|Superficie sobre la que se desarrolla un juego
+FICHA|Pieza que se mueve o coloca durante una partida
+DADO|Objeto que se lanza para obtener un resultado al azar
+BARAJA|Conjunto de cartas para jugar
+DOMINO|Juego con fichas rectangulares divididas en dos partes
+AJEDREZ|Juego de estrategia cuyo objetivo es dar jaque mate
+TURNO|Momento en el que le corresponde jugar a una persona
+REGLAS|Normas que determinan cómo se juega
+===2|Preparar la excursión
+MOCHILA|Bolsa que se lleva a la espalda
+CANTIMPLORA|Recipiente portátil para llevar agua
+LINTERNA|Aparato portátil que produce luz
+BRUJULA|Instrumento que ayuda a orientarse con una aguja imantada
+BOTIQUIN|Caja con material para atender pequeñas lesiones
+PRISMATICOS|Instrumento óptico para observar objetos lejanos con ambos ojos
+IMPERMEABLE|Prenda que protege de la lluvia
+PROVISIONES|Alimentos y otros suministros para un viaje
+===2|Al caer la tarde
+OCASO|Puesta del sol
+SOMBRA|Zona a la que no llega directamente la luz
+HORIZONTE|Línea aparente donde se encuentran cielo y tierra
+LUCERO|Astro que destaca por su brillo
+SILUETA|Contorno de una figura que se ve a contraluz
+BRISA|Viento suave
+PENUMBRA|Luz débil entre la claridad y la oscuridad
+CREPUSCULO|Claridad antes de salir el sol o después de ponerse
+===3|En la biblioteca
+CATALOGO|Relación ordenada de los fondos de una biblioteca
+PRESTAMO|Cesión temporal de un libro para llevárselo a casa
+SIGNATURA|Código que indica la ubicación de un documento en una colección
+LOMO|Parte del libro donde se unen sus hojas
+EDICION|Conjunto de ejemplares publicados a partir de una misma preparación
+PROLOGO|Texto introductorio que precede a una obra
+APENDICE|Sección complementaria que se añade al final de un libro
+GLOSARIO|Lista de términos acompañados de su explicación
+ANTOLOGIA|Selección de textos de uno o varios autores
+===3|El escenario sonoro
+ARPEGIO|Ejecución sucesiva de las notas de un acorde
+CADENCIA|Fórmula musical que produce una sensación de reposo o cierre
+DIAPASON|Utensilio metálico de dos ramas que da una nota de referencia
+ESCALA|Serie ordenada de notas musicales
+PENTAGRAMA|Conjunto de cinco líneas donde se escribe música
+SINCOPA|Desplazamiento del acento musical hacia una parte débil del compás
+UNISONO|Interpretación simultánea de la misma nota o melodía
+VIBRATO|Oscilación leve y regular de la altura de un sonido
+CORCHEA|Figura musical que dura la mitad de una negra
+===3|Formas del terreno
+MESETA|Llanura situada a cierta altitud
+ISTMO|Franja de tierra que une dos territorios mayores
+DELTA|Depósito de sedimentos en una desembocadura, a menudo ramificado
+CABO|Porción de tierra que se adentra en el mar
+GOLFO|Entrada amplia del mar en la costa
+FIORDO|Entrada marina larga y estrecha excavada por un glaciar
+ACANTILADO|Costa rocosa de pendiente abrupta
+CORDILLERA|Conjunto enlazado de montañas
+PENINSULA|Tierra rodeada de agua salvo por una zona de unión al continente
+===3|Bajo el microscopio
+BACTERIA|Microorganismo unicelular sin núcleo delimitado
+MEMBRANA|Envoltura que separa una célula de su entorno
+CITOPLASMA|Medio celular situado entre la membrana y el núcleo, cuando lo hay
+NUCLEO|Compartimento que contiene los cromosomas en células eucariotas
+RIBOSOMA|Estructura celular que fabrica proteínas
+VACUOLA|Compartimento celular delimitado por membrana y lleno de líquido
+MITOCONDRIA|Orgánulo donde tiene lugar gran parte de la respiración celular
+ORGANELO|Estructura especializada del interior de una célula
+MICROBIO|Ser microscópico, especialmente un microorganismo
+===3|La mesa del pintor
+LIENZO|Tela preparada para pintar sobre ella
+PALETA|Superficie en la que un pintor mezcla los colores
+PIGMENTO|Sustancia que da color a una pintura
+ACUARELA|Técnica pictórica con colores diluidos en agua y un aglutinante soluble
+OLEO|Pintura cuyos pigmentos se mezclan con un aceite secante
+CARBONCILLO|Barra de carbón vegetal usada para dibujar
+BOCETO|Estudio preliminar de una obra
+CABALLETE|Soporte donde se coloca un cuadro al pintarlo
+VELADURA|Capa de pintura transparente que matiza otra ya seca
+===3|En el laboratorio
+PROBETA|Recipiente graduado para medir volúmenes de líquidos
+PIPETA|Tubo que permite medir o transferir pequeñas cantidades de líquido
+MATRAZ|Recipiente de laboratorio de cuerpo ancho y cuello estrecho
+BALANZA|Instrumento que compara o mide masas
+REACTIVO|Sustancia empleada para producir o detectar una reacción química
+DISOLVENTE|Componente de una disolución que disuelve al soluto
+FILTRADO|Separación que hace pasar una mezcla a través de un material poroso
+PRECIPITADO|Sólido que se forma y se separa de una disolución
+DESTILAR|Separar componentes mediante evaporación y posterior condensación
+===3|La conversación
+EMISOR|Quien produce y envía un mensaje
+RECEPTOR|Quien recibe e interpreta un mensaje
+CONTEXTO|Circunstancias que rodean y ayudan a interpretar una comunicación
+CODIGO|Sistema de signos compartido para transmitir mensajes
+CANAL|Medio por el que se transmite un mensaje
+DIALECTO|Variedad de una lengua vinculada a un territorio o grupo
+ACENTO|Rasgos de pronunciación característicos de un hablante o comunidad
+REGISTRO|Variedad expresiva que se adapta a una situación comunicativa
+ENTONACION|Variación de la altura de la voz al hablar
+===3|Pequeña astronomía
+PLANETA|Cuerpo que orbita una estrella y domina su entorno orbital
+ASTEROIDE|Cuerpo rocoso menor que orbita el Sol
+TELESCOPIO|Instrumento que permite observar astros lejanos
+EQUINOCCIO|Paso del Sol por el ecuador celeste
+SOLSTICIO|Instante de máxima declinación norte o sur del Sol
+ROTACION|Giro de un cuerpo alrededor de su propio eje
+TRASLACION|Movimiento orbital de la Tierra alrededor del Sol
+CONSTELACION|Cada región delimitada del cielo asociada a una figura estelar
+HEMISFERIO|Cada mitad de una esfera dividida por un plano central
+===3|Rutas de la historia
+CRONOLOGIA|Ordenación de hechos según su fecha
+IMPERIO|Organización política que extiende su dominio sobre varios pueblos
+REPUBLICA|Forma de Estado cuya jefatura no es hereditaria
+MONARQUIA|Forma de Estado que tiene un monarca como jefe
+COLONIA|Territorio sometido al dominio de una potencia exterior
+TRATADO|Acuerdo formal entre Estados
+FRONTERA|Límite entre territorios
+EXILIO|Separación forzada o voluntaria de la propia patria
+CRONICA|Relato de acontecimientos siguiendo su orden temporal
+===3|Geometría cercana
+POLIGONO|Figura plana cerrada formada por segmentos rectos
+VERTICE|Punto donde se encuentran dos lados de un polígono
+DIAGONAL|Segmento que une dos vértices no consecutivos de un polígono
+PERIMETRO|Longitud total del contorno de una figura
+DIAMETRO|Segmento que pasa por el centro de un círculo y une dos puntos de su borde
+RADIO|Distancia del centro de un círculo a su circunferencia
+TANGENTE|Recta que toca una circunferencia en un solo punto
+SIMETRIA|Correspondencia entre partes respecto a una transformación
+BISECTRIZ|Semirrecta que divide un ángulo en dos iguales
+===3|La vida del río
+CAUDAL|Cantidad de agua que pasa por una sección en un tiempo dado
+AFLUENTE|Río que desemboca en otro
+CUENCA|Territorio cuyas aguas fluyen hacia un mismo desagüe
+RIBERA|Margen de un río o lago
+CAUCE|Lecho por el que corre un río
+MEANDRO|Curva pronunciada en el curso de un río
+ESTIAJE|Periodo en que un río presenta su caudal más bajo
+ALUVION|Material que deposita una corriente de agua
+TORRENTE|Corriente rápida e irregular de agua en un terreno pendiente
+===3|Tras la cámara
+ENCUADRE|Selección de lo que queda dentro de una imagen
+MONTAJE|Organización y unión de los planos de una película
+SECUENCIA|Conjunto de escenas que forma una unidad narrativa
+RACCORD|Continuidad entre elementos de planos consecutivos
+DOBLAJE|Sustitución de las voces originales de una película
+FOTOGRAMA|Cada imagen fija que compone una película
+PANORAMICA|Movimiento de la cámara que gira sobre su propio eje
+TRAVELLING|Desplazamiento físico de la cámara durante una toma
+METRAJE|Longitud de una película, usada también para aludir a su duración
+===3|De la viña a la copa
+VENDIMIA|Recolección de la uva destinada a hacer vino
+MOSTO|Zumo de uva antes de fermentar
+VIÑEDO|Terreno plantado de vides
+CEPA|Tronco de la vid o planta de vid individual
+BARRICA|Recipiente de madera empleado en la crianza del vino
+TANINO|Compuesto vegetal que puede aportar astringencia al vino
+FERMENTO|Agente que produce o favorece una fermentación
+CORCHO|Material de la corteza del alcornoque usado en tapones
+TRASIEGO|Paso del vino de un recipiente a otro para separarlo de los posos
+===3|Construir con cuidado
+ANDAMIO|Estructura provisional que permite trabajar en altura
+MORTERO|Mezcla de un conglomerante, arena y agua usada en construcción
+ENCOFRADO|Molde que contiene el hormigón fresco hasta que endurece
+TABIQUE|Pared delgada que divide espacios interiores
+VIGA|Elemento alargado que soporta cargas transversales
+PILAR|Soporte vertical de una construcción
+FORJADO|Elemento estructural que forma un piso horizontal
+SOLERA|Capa de hormigón que forma una base sobre el terreno
+REVOCO|Revestimiento continuo aplicado a un paramento
+===3|Tejer historias
+NARRADOR|Voz que cuenta una historia
+TRAMA|Organización de los acontecimientos de una narración
+DESENLACE|Parte final en la que se resuelve el conflicto de una historia
+PERSONAJE|Ser que interviene en una obra de ficción
+AMBIENTE|Entorno físico y social en el que transcurre una historia
+SUSPENSE|Expectación ante un desenlace incierto
+FLASHBACK|Salto narrativo a un momento anterior
+MONOLOGO|Discurso de un personaje que habla sin interlocutor
+EPILOGO|Parte final que añade un cierre o hechos posteriores a la historia
+===4|La forma de las palabras
+MORFEMA|Unidad mínima con significado gramatical o léxico
+LEXEMA|Parte de una palabra que aporta su significado léxico básico
+PREFIJO|Afijo que se coloca delante de una base
+SUFIJO|Afijo que se coloca después de una base
+ALOMORFO|Variante formal de un mismo morfema
+DERIVACION|Formación de palabras mediante afijos derivativos
+COMPOSICION|Formación de una palabra mediante la unión de bases léxicas
+FLEXION|Variación de una palabra para expresar rasgos gramaticales
+PARASINTESIS|Formación que combina simultáneamente procesos como prefijación y sufijación
+ACRONIMO|Sigla que se pronuncia como una palabra
+===4|Rocas que hablan
+GRANITO|Roca plutónica compuesta principalmente por cuarzo, feldespatos y micas
+BASALTO|Roca volcánica oscura y de grano fino
+PIZARRA|Roca metamórfica que se separa fácilmente en láminas
+CALIZA|Roca sedimentaria compuesta principalmente por carbonato cálcico
+GNEIS|Roca metamórfica que suele presentar bandas de minerales claros y oscuros
+CUARCITA|Roca metamórfica formada esencialmente por cuarzo
+MAGMA|Material rocoso fundido que se encuentra en el interior terrestre
+BATOLITO|Gran masa de roca plutónica formada en profundidad
+DIACLASA|Fractura de una roca sin desplazamiento apreciable de sus lados
+FOLIACION|Disposición planar de minerales o capas en una roca metamórfica
+===4|La vida en común
+ECOTONO|Zona de transición entre dos comunidades ecológicas
+BIOTOPO|Medio físico que ocupa una comunidad de seres vivos
+BIOCENOSIS|Conjunto de organismos que conviven en un biotopo
+NICHO|Papel funcional y conjunto de condiciones de una especie en un ecosistema
+ENDEMISMO|Presencia de una especie restringida a una zona geográfica
+MUTUALISMO|Relación entre especies en la que ambas obtienen beneficio
+COMENSALISMO|Relación en la que una especie se beneficia sin afectar apreciablemente a otra
+PARASITISMO|Relación en la que un organismo vive a costa de otro y lo perjudica
+SUCESION|Cambio progresivo de comunidades en un ecosistema
+RESILIENCIA|Capacidad de un sistema de recuperarse tras una perturbación
+===4|Energía en movimiento
+INERCIA|Resistencia de un cuerpo a cambiar su estado de movimiento
+MOMENTO|En mecánica, efecto de una fuerza respecto a un punto o eje
+IMPULSO|Producto de una fuerza constante por el tiempo durante el que actúa
+POTENCIA|Trabajo o energía transferida por unidad de tiempo
+ENTROPIA|Magnitud termodinámica relacionada con la dispersión de la energía
+ENTALPIA|Magnitud termodinámica igual a la energía interna más el producto presión-volumen
+ISOTERMO|Proceso que transcurre a temperatura constante
+ADIABATICO|Proceso en el que no se intercambia calor con el entorno
+CONVECCION|Transporte de calor asociado al movimiento de un fluido
+CONDUCCION|Transmisión de calor por interacción microscópica sin transporte global de materia
+===4|Arte sobre papel
+AGUAFUERTE|Grabado que emplea ácido para atacar una plancha metálica
+LITOGRAFIA|Técnica de impresión basada en la repulsión entre agua y grasa
+XILOGRAFIA|Grabado en relieve sobre madera
+SERIGRAFIA|Impresión que hace pasar tinta a través de una malla preparada
+BURIL|Herramienta de punta acerada empleada para grabar metal
+GOFRADO|Relieve obtenido al presionar papel u otro material con un molde
+ESTAMPA|Imagen obtenida al imprimir una matriz entintada
+MATRIZ|Superficie preparada a partir de la cual se obtienen impresiones
+PUNTASECA|Grabado directo sobre metal que deja rebabas características
+AGUATINTA|Técnica de grabado al ácido que permite obtener superficies tonales
+===4|Cúpulas y arcos
+PECHINA|Superficie triangular curva que conecta una cúpula con apoyos inferiores
+TROMPA|Bovedilla que permite pasar de una base poligonal a otra superior
+ARCOBOTANTE|Arco exterior que transmite empujes a un contrafuerte
+CONTRAFUERTE|Refuerzo de un muro que recibe empujes laterales
+TRIFORIO|Galería situada sobre las arcadas de una iglesia
+CLARISTORIO|Nivel alto de ventanas que ilumina la nave central
+ABSIDE|Cabecera de una iglesia, a menudo semicircular
+GIROLA|Pasillo que rodea la parte posterior del presbiterio
+DOSELETE|Pequeño dosel ornamental, a menudo sobre una escultura
+PINACULO|Remate arquitectónico apuntado característico del gótico
+===4|Números con intención
+MEDIANA|Valor central de un conjunto de datos ordenados
+VARIANZA|Media de los cuadrados de las desviaciones respecto a la media
+CUARTIL|Cada punto que divide los datos ordenados en cuatro partes
+PERCENTIL|Punto que deja por debajo un porcentaje dado de observaciones
+MUESTREO|Selección de una parte de una población para estudiarla
+SESGO|Desviación sistemática que puede distorsionar una estimación
+CORRELACION|Medida de asociación entre variables
+REGRESION|Método estadístico que modela la relación entre una respuesta y sus predictores
+ESTIMADOR|Regla que obtiene de una muestra una aproximación a un parámetro
+DISPERSION|Grado en que unos datos se separan entre sí o de un valor central
+===4|La composición visual
+PERSPECTIVA|Representación de la profundidad en una superficie plana
+ESCORZO|Representación de una figura orientada hacia el espectador y aparentemente acortada
+CLAROSCURO|Uso del contraste entre luces y sombras para modelar volúmenes
+SFUMATO|Difuminación suave de contornos asociada a Leonardo da Vinci
+EMPASTE|Aplicación espesa de pintura que deja relieve
+CONTRAPOSTO|Postura con el peso apoyado en una pierna y ejes corporales compensados
+ICONOGRAFIA|Estudio e identificación de los temas representados en imágenes
+TRIPTICO|Obra formada por tres paneles articulados o relacionados
+RETABLO|Estructura con imágenes que se sitúa detrás de un altar
+TENEBRISMO|Estilo que emplea fuertes contrastes de luz sobre fondos oscuros
+===4|Viaje de las lenguas
+ETIMOLOGIA|Estudio del origen y evolución histórica de las palabras
+COGNADO|Palabra que comparte origen con otra de una lengua emparentada
+CALCO|Traducción de los componentes de una expresión extranjera
+PRESTAMO|Elemento que una lengua toma de otra
+SUSTRATO|Influencia que deja una lengua desplazada sobre la que la sustituye
+ADSTRATO|Influencia entre lenguas que conviven sin que una sustituya necesariamente a la otra
+ISOGLOSA|Línea que delimita la extensión geográfica de un rasgo lingüístico
+DIGLOSIA|Coexistencia de variedades lingüísticas con funciones sociales diferenciadas
+PIDGIN|Sistema de comunicación surgido del contacto entre grupos sin lengua común
+TOPONIMIA|Estudio de los nombres de lugar
+===4|Cómo piensan las máquinas
+COMPILADOR|Programa que traduce código fuente a otro lenguaje o representación
+INTERPRETE|Programa que ejecuta instrucciones de un lenguaje sin exigir un ejecutable previo
+RECURSION|Técnica en la que una función se llama a sí misma
+ITERACION|Repetición de un conjunto de instrucciones
+VARIABLE|Nombre asociado a un valor que puede cambiar durante la ejecución
+CONSTANTE|Valor que permanece fijo en un contexto de programación
+DEPURACION|Proceso de localizar y corregir errores en un programa
+CONCURRENCIA|Progreso de varias tareas durante periodos de tiempo solapados
+HERENCIA|Mecanismo por el que una clase adquiere características de otra
+POLIMORFISMO|Capacidad de tratar distintas formas de un objeto mediante una interfaz común
+===4|Herencia y variación
+ALELO|Cada variante de un gen en un locus
+GENOTIPO|Conjunto de variantes genéticas de un organismo
+FENOTIPO|Rasgos observables resultantes de genes y ambiente
+MEIOSIS|División celular que reduce a la mitad la dotación cromosómica
+HAPLOIDE|Que tiene un solo juego de cromosomas
+DIPLOIDE|Que tiene dos juegos de cromosomas
+MUTACION|Cambio en una secuencia de material genético
+CODON|Grupo de tres nucleótidos que especifica un aminoácido o una señal de terminación
+INTRON|Segmento transcrito que se elimina durante la maduración del ARN
+EXON|Segmento de un transcrito que permanece en el ARN maduro tras el corte y empalme
+===4|Pliegues y estratos
+ANTICLINAL|Pliegue con los materiales más antiguos en su núcleo
+SINCLINAL|Pliegue con los materiales más recientes en su núcleo
+FALLA|Fractura del terreno con desplazamiento relativo de sus bloques
+HORST|Bloque elevado entre fallas
+GRABEN|Bloque hundido entre fallas
+DISCORDANCIA|Superficie que representa una interrupción en el registro sedimentario
+BUZAMIENTO|Ángulo que forma un estrato con el plano horizontal
+METAMORFISMO|Transformación de una roca por presión o temperatura sin fusión total
+DIAGENESIS|Procesos que convierten un sedimento en roca sedimentaria
+OROGENESIS|Conjunto de procesos que forman cordilleras
+===4|El lenguaje del mapa
+MERIDIANO|Semicírculo terrestre que une ambos polos
+PARALELO|Círculo de la superficie terrestre perpendicular al eje de rotación
+LATITUD|Distancia angular de un punto respecto al ecuador
+LONGITUD|Distancia angular respecto a un meridiano de referencia
+AZIMUT|Ángulo horizontal medido desde una dirección de referencia, normalmente el norte
+PROYECCION|Procedimiento que representa una superficie curva sobre un plano
+GEODESIA|Ciencia que estudia la forma y las dimensiones de la Tierra
+BATIMETRIA|Medición y representación de las profundidades acuáticas
+HIPSOMETRIA|Medición o representación de las alturas del terreno
+EQUIDISTANCIA|Diferencia constante de altura entre curvas de nivel consecutivas
+===4|Voces de un poema
+ENDECASILABO|Verso de once sílabas métricas
+HEPTASILABO|Verso de siete sílabas métricas
+SINALEFA|Unión métrica de vocales de palabras contiguas
+DIERESIS|Separación métrica de las vocales que forman un diptongo
+SINERESIS|Unión métrica de dos vocales que normalmente forman hiato
+CESURA|Pausa interna que divide un verso compuesto
+HEMISTIQUIO|Cada parte de un verso compuesto separada por una cesura
+ENCABALGAMIENTO|Continuación de una unidad sintáctica más allá del final del verso
+ASONANCIA|Coincidencia solo de vocales desde la última vocal tónica en una rima
+CONSONANCIA|Coincidencia de vocales y consonantes desde la última vocal tónica en una rima
+===4|Mirar el movimiento
+FOTOMETRIA|Medición de la luz teniendo en cuenta la sensibilidad visual humana
+REFRACCION|Cambio de dirección de una onda al pasar a un medio con distinta velocidad
+DIFRACCION|Desviación y expansión de ondas al encontrar obstáculos o aberturas
+DISPERSION|Separación de colores por su distinta refracción en un medio
+POLARIZACION|Organización de las direcciones de oscilación de una onda transversal
+INTERFERENCIA|Superposición de ondas que refuerza o reduce su amplitud
+ABERRACION|Defecto óptico que impide formar una imagen ideal
+COLIMACION|Ajuste de un haz para que sus rayos sean aproximadamente paralelos
+LUMINANCIA|Magnitud fotométrica que describe la luz emitida en una dirección por unidad de área proyectada
+OPACIDAD|Propiedad de un cuerpo que impide el paso de la luz
+===5|La arquitectura del discurso
+EPANALEPSIS|Repetición al final de un enunciado de una palabra usada al principio
+ANADIPLOSIS|Repetición al comienzo de un enunciado de la palabra final del anterior
+EPIFORA|Repetición de palabras al final de enunciados sucesivos
+POLISINDETON|Repetición expresiva de conjunciones
+ASINDETON|Omisión expresiva de conjunciones
+HIPERBATON|Alteración del orden habitual de los elementos de una oración
+PROSOPOPEYA|Atribución de cualidades humanas a seres inanimados o abstractos
+LITOTE|Afirmación atenuada que se expresa negando lo contrario
+OXIMORON|Combinación de términos aparentemente contradictorios
+PRETERICION|Figura que menciona algo mientras afirma que lo va a omitir
+APOSIOPESIS|Interrupción de un discurso cuyo sentido se deja sobreentendido
+===5|El taller del filólogo
+ESTEMA|Árbol que representa las relaciones entre testimonios de un texto
+ARQUETIPO|Antepasado textual común reconstruido a partir de los testimonios conservados
+LECCION|Lectura concreta que ofrece un testimonio en un pasaje
+VARIANTE|Forma textual que difiere de otra en un mismo lugar de la obra
+LAGUNA|Falta de texto en un manuscrito o testimonio
+INTERPOLACION|Pasaje añadido a un texto por alguien distinto de su autor original
+DITOGRAFIA|Repetición involuntaria de letras o palabras al copiar
+HAPLOGRAFIA|Omisión al copiar de un elemento semejante a otro contiguo
+PALEOGRAFIA|Estudio de las escrituras antiguas y su lectura
+CODICOLOGIA|Estudio material de los manuscritos como objetos
+ECDOTICA|Disciplina dedicada a la edición crítica de textos
+===5|Límites del conocimiento
+FALIBILISMO|Postura según la cual nuestras creencias pueden estar equivocadas
+RACIONALISMO|Corriente que otorga a la razón un papel central en el conocimiento
+EMPIRISMO|Corriente que sitúa la experiencia en la base del conocimiento
+ESCEPTICISMO|Actitud filosófica que cuestiona la posibilidad o certeza del conocimiento
+FENOMENOLOGIA|Estudio filosófico de las estructuras de la experiencia tal como se manifiestan
+HERMENEUTICA|Teoría y práctica de la interpretación
+PRAGMATISMO|Corriente que relaciona significado y verdad con consecuencias prácticas
+NOMINALISMO|Doctrina que niega a los universales existencia independiente de los individuos
+DEDUCCION|Razonamiento cuya conclusión se sigue necesariamente de sus premisas
+INDUCCION|Inferencia que pasa de casos particulares a una generalización
+ABDUCCION|Inferencia que propone una explicación plausible de lo observado
+===5|Estructuras abstractas
+HOMOMORFISMO|Aplicación que conserva las operaciones de una estructura algebraica
+ENDOMORFISMO|Homomorfismo de una estructura en sí misma
+AUTOMORFISMO|Isomorfismo de una estructura consigo misma
+IDEAL|Subconjunto de un anillo estable bajo suma y multiplicación por elementos del anillo
+COCIENTE|Estructura formada al identificar elementos mediante una relación compatible
+RETICULO|Conjunto ordenado en el que cada par tiene supremo e ínfimo
+MONOIDE|Estructura con una operación asociativa y un elemento neutro
+SEMIGRUPO|Conjunto provisto de una operación asociativa
+GRUPO|Conjunto con operación asociativa, neutro e inverso para cada elemento
+ANILLO|Estructura algebraica con suma y multiplicación compatibles por distributividad
+CUERPO|Anillo conmutativo en el que todo elemento no nulo tiene inverso multiplicativo
+===5|Matemáticas del espacio
+HOMEOMORFISMO|Biyectiva continua cuya inversa también es continua
+HOMOTOPIA|Deformación continua entre dos aplicaciones
+COMPACIDAD|Propiedad por la que todo recubrimiento abierto admite un subrecubrimiento finito
+CONEXIDAD|Imposibilidad de separar un espacio en dos abiertos no vacíos disjuntos
+VARIEDAD|Espacio que localmente se parece a un espacio euclídeo
+FRONTERA|Conjunto de puntos donde todo entorno toca un conjunto y su complementario
+ADHERENCIA|Conjunto de puntos cuyos entornos siempre cortan un conjunto dado
+INTERIOR|Mayor conjunto abierto contenido en un conjunto dado
+DENSIDAD|Propiedad de un subconjunto cuya adherencia es todo el espacio
+METRICA|Función que asigna distancias y satisface los axiomas correspondientes
+ENTORNO|Conjunto que contiene un abierto en torno a un punto
+===5|Materia en equilibrio
+ESTEQUIOMETRIA|Estudio de las relaciones cuantitativas en las reacciones químicas
+ISOMERIA|Existencia de compuestos con igual fórmula molecular y distinta estructura
+QUIRALIDAD|Propiedad de un objeto no superponible con su imagen especular
+ENANTIOMERO|Cada uno de dos isómeros que son imágenes especulares no superponibles
+TAUTOMERIA|Equilibrio entre isómeros que suelen diferir en la posición de un protón y un enlace
+CATALISIS|Modificación de la velocidad de una reacción por una sustancia que se regenera
+ADSORCION|Acumulación de moléculas sobre una superficie
+DESORCION|Liberación de moléculas previamente retenidas en una superficie
+SOLVATACION|Interacción de un soluto con moléculas de disolvente que lo rodean
+SUBLIMACION|Paso directo del estado sólido al gaseoso
+EUTECTICO|Mezcla que funde a una temperatura mínima para una composición concreta
+===5|El mapa de la célula
+CITOESQUELETO|Red de filamentos que organiza y sostiene el interior celular
+CENTROSOMA|Centro organizador de microtúbulos típico de las células animales
+LISOSOMA|Orgánulo con enzimas que degradan materiales celulares
+PEROXISOMA|Orgánulo que participa en oxidaciones y en la degradación del peróxido de hidrógeno
+NUCLEOLO|Región nuclear donde se ensamblan subunidades ribosómicas
+CROMATINA|Complejo de ADN y proteínas que constituye los cromosomas
+CENTROMERO|Región cromosómica donde se ensambla el cinetocoro
+CINETOCORO|Complejo proteico al que se unen los microtúbulos del huso
+TELOMERO|Región protectora situada en los extremos de un cromosoma lineal
+PLASMODESMO|Canal que comunica citoplasmas de células vegetales vecinas
+APOPTOSIS|Forma regulada de muerte celular que suele evitar una respuesta inflamatoria
+===5|El reloj de las estrellas
+PARALAJE|Cambio aparente de posición de un objeto al variar el punto de observación
+PRECESION|Cambio lento de la orientación de un eje de rotación
+NUTACION|Oscilación periódica que se superpone a la precesión de un eje
+PERIHELIO|Punto de una órbita solar más próximo al Sol
+AFELIO|Punto de una órbita solar más alejado del Sol
+PERIASTRO|Punto de una órbita más cercano al cuerpo central
+APOASTRO|Punto de una órbita más alejado del cuerpo central
+SINODICO|Periodo medido entre configuraciones equivalentes respecto al Sol y al observador
+SIDEREO|Periodo medido respecto a las estrellas lejanas
+OCULTACION|Paso de un cuerpo celeste por delante de otro que lo esconde
+LIBRACION|Oscilación aparente que permite ver algo más de la mitad de la superficie lunar
+===5|Texturas de la Tierra
+PORFIDICO|Textura ígnea con cristales grandes incluidos en una matriz más fina
+FANERITICO|Textura de una roca ígnea cuyos cristales se distinguen a simple vista
+AFANITICO|Textura de una roca ígnea cuyos cristales no se distinguen a simple vista
+PIROCLASTO|Fragmento sólido expulsado durante una erupción volcánica explosiva
+IGNIMBRITA|Depósito consolidado de una corriente piroclástica rica en ceniza y pómez
+OFIOLITA|Asociación de rocas que representa fragmentos de litosfera oceánica en un continente
+PERIDOTITA|Roca ultramáfica rica en olivino, característica del manto superior
+ECLOGITA|Roca metamórfica de alta presión con granate y omfacita
+ANATEXIA|Fusión parcial de rocas en profundidad
+MIGMATITA|Roca que combina rasgos metamórficos y evidencias de fusión parcial
+METASOMATISMO|Cambio químico de una roca por intercambio de materia con fluidos
+===5|Patrones de la evolución
+CLADISTICA|Clasificación de los organismos según su parentesco evolutivo
+SINAPOMORFIA|Carácter derivado compartido que apoya un grupo evolutivo
+PLESIOMORFIA|Estado ancestral de un carácter
+HOMOPLASIA|Semejanza evolutiva que no procede de herencia desde un antepasado común inmediato
+MONOFILIA|Condición de un grupo que incluye un antepasado y todos sus descendientes
+PARAFILIA|Condición de un grupo que incluye al antepasado pero excluye algunos descendientes
+ESPECIACION|Proceso evolutivo por el que surgen nuevas especies
+VICARIANCIA|Separación de una población por la aparición de una barrera geográfica
+ALOPATRIA|Distribución de poblaciones en áreas geográficas separadas
+SIMPATRIA|Coincidencia de poblaciones o especies en una misma área geográfica
+COEVOLUCION|Cambio evolutivo recíproco entre especies que interactúan
+===5|Los mecanismos de la voz
+OCLUSIVA|Consonante producida con cierre completo y posterior apertura del paso del aire
+FRICATIVA|Consonante producida por fricción del aire en un estrechamiento
+AFRICADA|Consonante que combina una oclusión y una fricación en una unidad
+APROXIMANTE|Sonido con acercamiento de articuladores sin fricción turbulenta intensa
+ALOFONO|Variante fonética de un fonema
+FONOTACTICA|Estudio de las combinaciones de sonidos permitidas en una lengua
+COARTICULACION|Influencia mutua de sonidos próximos durante su articulación
+PROSODIA|Conjunto de rasgos como acento, ritmo y entonación
+FORMANTE|Concentración de energía acústica asociada a una resonancia del tracto vocal
+GLOTAL|Sonido articulado en la glotis
+UVULAR|Sonido articulado con intervención de la úvula
+===5|Las reglas del razonamiento
+CONSISTENCIA|Propiedad de un sistema en el que no se derivan contradicciones
+COMPLETITUD|Propiedad de un sistema deductivo capaz de demostrar todas las fórmulas válidas de su semántica
+DECIDIBILIDAD|Existencia de un procedimiento que resuelve siempre un problema en un número finito de pasos
+SATISFACIBILIDAD|Propiedad de una fórmula verdadera bajo al menos una interpretación
+CUANTIFICADOR|Operador lógico que expresa alcance universal o existencial
+PREDICADO|Expresión lógica que atribuye una propiedad o relación a sus argumentos
+IMPLICACION|Conectiva lógica que expresa una condición suficiente
+EQUIVALENCIA|Relación entre proposiciones que tienen el mismo valor de verdad en cada interpretación
+CONTRAPOSICION|Paso de una implicación a la que niega e intercambia antecedente y consecuente
+CONTRADICCION|Fórmula falsa bajo toda interpretación
+CONTINGENCIA|Propiedad de una fórmula verdadera en unas interpretaciones y falsa en otras
+===5|Entre códices y sellos
+SIGILOGRAFIA|Disciplina que estudia los sellos empleados para autenticar documentos
+DIPLOMATICA|Estudio crítico de la forma y autenticidad de los documentos históricos
+EPIGRAFIA|Disciplina dedicada al estudio de las inscripciones
+HERALDICA|Estudio de los escudos de armas y sus reglas
+BLASON|Descripción técnica de un escudo de armas
+FILIGRANA|Marca de agua visible al trasluz en ciertos papeles
+PERGAMINO|Piel preparada para escribir sobre ella
+VITELA|Piel muy fina preparada para escritura o pintura
+CARTULARIO|Colección de copias de documentos y privilegios de una institución
+BULARIO|Colección de bulas pontificias
+INCIPIT|Palabras iniciales por las que se identifica un texto
+===5|Memoria de las formas
+PALMETA|Motivo ornamental que recuerda a una hoja de palma abierta
+ACANTO|Planta cuyas hojas inspiran la ornamentación del capitel corintio
+ASTRAGALO|Moldura convexa de sección aproximadamente semicircular
+ESCOCIA|Moldura cóncava habitual en las basas de columnas
+GOLA|Moldura cuyo perfil combina una curva cóncava y otra convexa
+MODILLON|Elemento saliente que sostiene o adorna una cornisa
+SOFITO|Cara inferior de un elemento arquitectónico, como un arco o una cornisa
+ENJUTA|Superficie entre el arco y el marco rectangular que lo contiene
+ALFIZ|Moldura rectangular que enmarca un arco
+MOCARABE|Ornamento de piezas colgantes prismáticas, típico de la arquitectura islámica
+ATAURIQUE|Decoración de motivos vegetales estilizados en el arte islámico
+===5|Cien conexiones
+PALINGENESIA|Renacimiento o regeneración de un ser o de una realidad
+APOTROPAICO|Que se cree capaz de alejar el mal
+HIEROFANIA|Manifestación de lo sagrado
+LIMINAL|Relativo a un umbral o a un estado de transición
+ANAMNESIS|Recuerdo o recuperación de lo vivido; también, historia recogida en una entrevista clínica
+CATARSIS|Purificación o descarga emocional, especialmente mediante una experiencia artística
+EXEGESIS|Interpretación detallada de un texto, especialmente religioso
+ANAGOGIA|Interpretación que eleva el sentido de un texto hacia una realidad espiritual
+ESCATOLOGIA|Doctrina sobre el destino último del ser humano y del mundo
+COSMOGONIA|Relato o teoría sobre el origen del universo
+TEOGONIA|Relato sobre el origen y genealogía de los dioses

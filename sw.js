@@ -1,6 +1,6 @@
 // Each Pages subdirectory owns its cache. Files switch together after installation.
 const PREFIX = `entreletras:${new URL(self.registration.scope).pathname}:`;
-const CACHE = `${PREFIX}v4`;
+const CACHE = `${PREFIX}v5`;
 const ASSETS = ['./', './index.html', './style.css', './puzzles.js', './core.js', './app.js', './icon.svg', './icon-192.png', './icon-512.png', './manifest.webmanifest'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS.map(path => new Request(new URL(path, self.registration.scope), { cache: 'reload' })))).then(() => self.skipWaiting()));

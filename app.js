@@ -3,6 +3,9 @@
   const $ = selector => document.querySelector(selector);
   const core = window.EntreletrasCore, { positions, coord } = core;
   const levels = window.PUZZLES, storageKey = 'entreletras-v1';
+  // Display order can grow or change; saves always use the original stable id.
+  const levelNumber = puzzle => levels.indexOf(puzzle) + 1;
+  const nextPuzzle = offset => levels[levelNumber(level) - 1 + offset];
   const difficultyNames = ['Primeros pasos', 'Fácil', 'Intermedio', 'Difícil', 'Experto'];
   const compact = matchMedia('(max-width: 900px)');
   let saved = { level: 1, games: {}, preferences: {} }, storageUnavailable = false;
@@ -36,8 +39,8 @@
   function say(message) { $('#status').textContent = message; }
   function renderProgress() {
     const count = levels.filter(l => saved.games[l.id]?.completed).length;
-    $('#total-completed').textContent = `${count} / 25`;
-    $('#levels').setAttribute('aria-label', `Abrir recorrido: ${count} de 25 niveles completados`);
+    $('#total-completed').textContent = `${count} / ${levels.length}`;
+    $('#levels').setAttribute('aria-label', `Abrir recorrido: ${count} de ${levels.length} niveles completados`);
   }
   function load(id) {
     level = levels.find(l => l.id === id) || levels[0];
@@ -47,11 +50,11 @@
     selectedWord = game.selectedWord;
     selectedCell = positions(level.words[selectedWord]).includes(game.selectedCell) ? game.selectedCell : positions(level.words[selectedWord]).find(p => !game.letters[p]) || positions(level.words[selectedWord])[0];
     autoSize = true;
-    $('#level-kind').textContent = `NIVEL ${String(level.id).padStart(2, '0')} / 25 · ${level.type === 'crossword' ? 'CRUCIGRAMA' : 'AUTODEFINIDO'}`;
+    $('#level-kind').textContent = `NIVEL ${String(levelNumber(level)).padStart(2, '0')} / ${levels.length} · ${level.type === 'crossword' ? 'CRUCIGRAMA' : 'AUTODEFINIDO'}`;
     $('#level-title').textContent = level.title;
     document.title = `${level.title} · Entreletras`;
     $('#difficulty').textContent = difficultyNames[level.difficulty - 1];
-    $('#prev-level').disabled = level.id === 1; $('#next-level').disabled = level.id === 25;
+    $('#prev-level').disabled = !nextPuzzle(-1); $('#next-level').disabled = !nextPuzzle(1);
     $('#clues-title').textContent = level.type === 'crossword' ? 'Las palabras' : 'Las definiciones';
     renderBoard(); renderClues(); applyLayout(); refresh(); persist(); renderProgress();
     say(game.completed ? 'Nivel completado. Elige otro o reinícialo desde Opciones.' : 'Tu partida se guarda automáticamente.');
@@ -76,7 +79,7 @@
     const padding = mobile ? 32 : 44;
     if (autoSize) {
       const fit = Math.floor(Math.min((sc.clientWidth - padding) / bounds.cols - 2, (sc.clientHeight - padding) / bounds.rows - 2));
-      cellSize = Math.max(level.type === 'arrowword' ? 56 : 32, Math.min(level.type === 'arrowword' ? 76 : 54, fit));
+      cellSize = Math.max(level.type === 'arrowword' ? 56 : 32, Math.min(level.type === 'arrowword' ? 80 : compact.matches ? 54 : 76, fit));
     }
     $('#board').style.setProperty('--cell', `${cellSize}px`);
     $('#zoom-out').disabled = cellSize <= 28; $('#zoom-in').disabled = cellSize >= 96;
@@ -164,16 +167,26 @@
     if (!core.solved(cells, game.letters) || game.completed) return;
     game.completed = true; refresh(); persist(); renderProgress();
     const all = levels.every(l => saved.games[l.id]?.completed);
-    openModal(`<div class="eyebrow">${all ? 'RECORRIDO COMPLETADO' : 'TODO ENCAJA'}</div><div class="completion-mark">${all ? '25 / 25' : String(level.id).padStart(2, '0')}</div><h2 id="modal-title">${all ? 'Una aventura entre letras.' : 'Una más, bien resuelta.'}</h2><p>Has completado «${escape(level.title)}» con ${game.hints} ${game.hints === 1 ? 'letra revelada' : 'letras reveladas'}.</p><button class="primary" id="continue">${all ? 'Volver al tablero' : level.id < 25 ? 'Siguiente nivel →' : 'Ver el recorrido'}</button>`);
-    $('#continue').onclick = () => { $('#modal').close(); if (!all) { if (level.id < 25) load(level.id + 1); else showLevels(); } };
+    openModal(`<div class="eyebrow">${all ? 'RECORRIDO COMPLETADO' : 'TODO ENCAJA'}</div><div class="completion-mark">${all ? `${levels.length} / ${levels.length}` : String(levelNumber(level)).padStart(2, '0')}</div><h2 id="modal-title">${all ? 'Una aventura entre letras.' : 'Una más, bien resuelta.'}</h2><p>Has completado «${escape(level.title)}» con ${game.hints} ${game.hints === 1 ? 'letra revelada' : 'letras reveladas'}.</p><button class="primary" id="continue">${all ? 'Volver al tablero' : nextPuzzle(1) ? 'Siguiente nivel →' : 'Ver el recorrido'}</button>`);
+    $('#continue').onclick = () => { $('#modal').close(); if (!all) { if (nextPuzzle(1)) load(nextPuzzle(1).id); else showLevels(); } };
   }
-  function openModal(content) {
+  function openModal(content, kind = '') {
     if ($('#modal').open) $('#modal').close();
+    $('#modal').className = kind;
     $('#modal-content').innerHTML = content; $('#modal').showModal(); $('#modal').scrollTop = 0;
   }
   function showLevels() {
     const count = levels.filter(l => saved.games[l.id]?.completed).length;
-    openModal(`<div class="eyebrow">25 DESAFÍOS · A TU RITMO</div><h2 id="modal-title">El recorrido</h2><div class="journey-progress"><span>${count} de 25 completados</span><progress aria-label="Niveles completados" max="25" value="${count}"></progress></div>` + difficultyNames.map((name, group) => `<section class="level-section"><h3>${name}<span>${String(group * 5 + 1).padStart(2, '0')} — ${group * 5 + 5}</span></h3><div class="level-map">${levels.slice(group * 5, group * 5 + 5).map(l => { const g = saved.games[l.id]; return `<button class="level-button ${l.id === level.id ? 'active' : ''}" data-level="${l.id}" ${l.id === level.id ? 'aria-current="step"' : ''}><span class="level-number">${String(l.id).padStart(2, '0')}</span><span class="level-info">${escape(l.title)}<small>${l.type === 'crossword' ? 'Crucigrama' : 'Autodefinido'} · ${l.words.length} palabras</small></span><span class="level-state">${g?.completed ? '✓ Hecho' : Object.keys(g?.letters || {}).length ? 'En curso' : '→'}</span></button>`; }).join('')}</div></section>`).join(''));
+    const groups = difficultyNames.map((name, group) => {
+      const chapter = levels.filter(p => p.difficulty === group + 1);
+      if (!chapter.length) return '';
+      const done = chapter.filter(p => saved.games[p.id]?.completed).length;
+      return `<details class="level-section" ${level.difficulty === group + 1 ? 'open' : ''}><summary><span>${name}<small>Niveles ${String(levelNumber(chapter[0])).padStart(2, '0')} — ${levelNumber(chapter.at(-1))}</small></span><span class="chapter-count">${done} / ${chapter.length}</span></summary><div class="level-map">${chapter.map(l => {
+        const g = saved.games[l.id];
+        return `<button class="level-button ${l.id === level.id ? 'active' : ''}" data-level="${l.id}" data-position="${levelNumber(l)}" ${l.id === level.id ? 'aria-current="step"' : ''}><span class="level-number">${String(levelNumber(l)).padStart(2, '0')}</span><span class="level-info">${escape(l.title)}<small>${l.type === 'crossword' ? 'Crucigrama' : 'Autodefinido'} · ${l.words.length} palabras</small></span><span class="level-state">${g?.completed ? '✓ Hecho' : Object.keys(g?.letters || {}).length ? 'En curso' : '→'}</span></button>`;
+      }).join('')}</div></details>`;
+    }).join('');
+    openModal(`<div class="eyebrow">${levels.length} DESAFÍOS · A TU RITMO</div><h2 id="modal-title">El recorrido</h2><div class="journey-progress"><span>${count} de ${levels.length} completados</span><progress aria-label="Niveles completados" max="${levels.length}" value="${count}"></progress></div>${groups}`, 'journey-dialog');
   }
   function showClues() {
     if (compact.matches) openModal(`<div class="eyebrow">${escape(level.title)}</div><h2 id="modal-title">Todas las pistas</h2><div class="clue-list">${clueHTML()}</div>`);
@@ -185,10 +198,10 @@
     $('#help').onclick = showHelp; $('#restart').onclick = confirmReset;
   }
   function showHelp() {
-    openModal('<div class="eyebrow">CADA CRUCE ES UNA PISTA</div><h2 id="modal-title">Cómo jugar</h2><details class="help-section" open><summary>Escribe y conecta</summary><p>Selecciona una casilla o una definición y escribe la respuesta. No hacen falta tildes; la Ñ sí se conserva. Toca dos veces un cruce para cambiar de dirección.</p></details><details class="help-section"><summary>Crucigramas y autodefinidos</summary><p>En los crucigramas, abre Pistas para consultar las definiciones. En los autodefinidos están dentro del tablero: toca la flecha de cada pista para verla completa debajo. → indica horizontal; ↓ indica vertical.</p></details><details class="help-section"><summary>Ayudas y teclado</summary><p>Comprobar marca los errores con rojo y un signo de exclamación. Revelar letra resuelve una casilla. Puedes deshacer letras; una ayuda usada sigue contando.</p><p>Flechas: moverte. Espacio: cambiar dirección en un cruce. Intro: siguiente pista. Retroceso: borrar. Ctrl o ⌘ Z: deshacer. Pulsa Ajustar para volver al tamaño inicial del tablero.</p></details><details class="help-section"><summary>Guardar y jugar en el móvil</summary><p>Tu partida y la última casilla se guardan automáticamente en este navegador. En Opciones puedes mostrar u ocultar el teclado de pantalla.</p><p>Desde el menú de Safari o Chrome puedes añadir la web a la pantalla de inicio. Tras cargarla con conexión y guardarse sus archivos, podrás jugar sin internet.</p></details><details class="help-section"><summary>El recorrido</summary><p>Hay 25 niveles que alternan ambos formatos, agrupados en cinco grados orientativos de dificultad. Puedes jugar en el orden que prefieras. Los niveles completados se pueden consultar o reiniciar.</p></details>');
+    openModal('<div class="eyebrow">CADA CRUCE ES UNA PISTA</div><h2 id="modal-title">Cómo jugar</h2><details class="help-section" open><summary>Escribe y conecta</summary><p>Selecciona una casilla o una definición y escribe la respuesta. No hacen falta tildes; la Ñ sí se conserva. Toca dos veces un cruce para cambiar de dirección.</p></details><details class="help-section"><summary>Crucigramas y autodefinidos</summary><p>En los crucigramas, abre Pistas para consultar las definiciones. En los autodefinidos están dentro del tablero: toca la flecha de cada pista para verla completa debajo. → indica horizontal; ↓ indica vertical.</p></details><details class="help-section"><summary>Ayudas y teclado</summary><p>Comprobar marca los errores con rojo y un signo de exclamación. Revelar letra resuelve una casilla. Puedes deshacer letras; una ayuda usada sigue contando.</p><p>Flechas: moverte. Espacio: cambiar dirección en un cruce. Intro: siguiente pista. Retroceso: borrar. Ctrl o ⌘ Z: deshacer. Pulsa Ajustar para volver al tamaño inicial del tablero.</p></details><details class="help-section"><summary>Guardar y jugar en el móvil</summary><p>Tu partida y la última casilla se guardan automáticamente en este navegador. En Opciones puedes mostrar u ocultar el teclado de pantalla.</p><p>Desde el menú de Safari o Chrome puedes añadir la web a la pantalla de inicio. Tras cargarla con conexión y guardarse sus archivos, podrás jugar sin internet.</p></details><details class="help-section"><summary>El recorrido</summary><p>Hay 100 niveles que alternan ambos formatos, agrupados en cinco tramos de 20 niveles y dificultad creciente. Los tableros de la primera edición conservan sus partidas, aunque algunos aparecen en otra posición. Puedes jugar en el orden que prefieras. Los niveles completados se pueden consultar o reiniciar.</p></details>');
   }
   function confirmReset() {
-    openModal(`<div class="eyebrow">NIVEL ${level.id}</div><h2 id="modal-title">¿Volver a empezar?</h2><p>Se borrarán las letras, las ayudas usadas y la marca de completado de «${escape(level.title)}».</p><div class="modal-buttons"><button class="secondary" id="cancel-reset">Seguir jugando</button><button class="secondary" id="confirm-reset">Reiniciar nivel</button></div>`);
+    openModal(`<div class="eyebrow">NIVEL ${levelNumber(level)}</div><h2 id="modal-title">¿Volver a empezar?</h2><p>Se borrarán las letras, las ayudas usadas y la marca de completado de «${escape(level.title)}».</p><div class="modal-buttons"><button class="secondary" id="cancel-reset">Seguir jugando</button><button class="secondary" id="confirm-reset">Reiniciar nivel</button></div>`);
     $('#cancel-reset').onclick = () => $('#modal').close();
     $('#confirm-reset').onclick = () => { delete saved.games[level.id]; histories.delete(level.id); $('#modal').close(); load(level.id); focusCell(); };
   }
@@ -201,7 +214,8 @@
   $('#modal').addEventListener('click', e => { if (e.target !== $('#modal')) return; const r = $('#modal').getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) $('#modal').close(); });
   $('#levels').onclick = showLevels; $('#options').onclick = showOptions;
   $('#show-clues').onclick = showClues; $('#close-clues').onclick = () => { cluesVisible = false; saved.preferences.clues = false; applyLayout(); persist(); $('#show-clues').focus(); };
-  $('#prev-level').onclick = () => load(level.id - 1); $('#next-level').onclick = () => load(level.id + 1);
+  $('#prev-level').onclick = () => { if (nextPuzzle(-1)) load(nextPuzzle(-1).id); };
+  $('#next-level').onclick = () => { if (nextPuzzle(1)) load(nextPuzzle(1).id); };
   $('#prev-clue').onclick = () => selectWord(selectedWord - 1); $('#next-clue').onclick = () => selectWord(selectedWord + 1);
   $('#clue-list').onclick = e => { const el = e.target.closest('[data-word]'); if (el) selectWord(Number(el.dataset.word), true); };
   $('#board').onclick = e => {

@@ -1,4 +1,8 @@
-"""Contenido original y generador determinista de los 25 tableros."""
+"""Contenido original y generador determinista de los 100 tableros.
+
+Los identificadores de los primeros 25 se conservan para mantener las partidas.
+La posición visible es independiente del identificador persistente.
+"""
 import json, random, unicodedata
 from pathlib import Path
 DATA = '''Primeras letras
@@ -259,7 +263,9 @@ def norm(s):
 
 def generate(entries,seed):
     best=None
-    for attempt in range(160):
+    for attempt in range(2000):
+        if best and attempt >= 64:
+            break
         rng=random.Random(seed*1000+attempt)
         todo=list(entries); rng.shuffle(todo); todo.sort(key=lambda e:-len(e[0]))
         grid={}; reserved=set(); placed=[]; dirs={}
@@ -293,7 +299,9 @@ def generate(entries,seed):
                             score=valid(word,r,c,d)
                             if score is not None:candidates.append((score,e,r,c,d))
             if not candidates:break
-            _,e,r,c,d=min(candidates,key=lambda x:x[0]);todo.remove(e)
+            ranked = sorted(candidates, key=lambda x: x[0])
+            choice = ranked[0] if attempt < 32 else rng.choice(ranked[:min(8, len(ranked))])
+            _,e,r,c,d=choice;todo.remove(e)
             dr,dc=(0,1) if d=='H' else (1,0)
             reserved.add((r-dr,c-dc))
             for i,ch in enumerate(e[0]):
@@ -312,11 +320,53 @@ def generate(entries,seed):
     assert best, (seed,entries)
     return best
 
-levels=[]
-for i,block in enumerate(DATA.split('===')):
-    title,*lines=block.strip().splitlines();entries=[(norm(line.split('|')[0]),line.split('|')[1]) for line in lines]
-    puzzle=generate(entries,i+1)
-    puzzle.update(id=i+1,title=title,type='crossword' if i%2==0 else 'arrowword',difficulty=min(5,i//5+1))
-    levels.append(puzzle)
-    print(i+1,title,puzzle['rows'],puzzle['cols'],flush=True)
-Path(__file__).resolve().parents[1].joinpath('puzzles.js').write_text('window.PUZZLES = '+json.dumps(levels,ensure_ascii=False)+';\n')
+def build():
+    root = Path(__file__).resolve().parents[1]
+    # Reuse shipped grids verbatim. Regenerating a published board would break saves.
+    existing = {}
+    output = root / 'puzzles.js'
+    if output.exists():
+        existing = {p['id']: p for p in json.loads(output.read_text().removeprefix('window.PUZZLES = ').strip().removesuffix(';'))}
+    original = []
+    for i, block in enumerate(DATA.split('===')):
+        title, *lines = block.strip().splitlines()
+        entries = [(norm(line.split('|')[0]), line.split('|')[1]) for line in lines]
+        puzzle = existing.get(i + 1) or generate(entries, i + 1)
+        puzzle.update(id=i + 1, title=title, type='crossword' if i % 2 == 0 else 'arrowword', difficulty=min(5, i // 5 + 1))
+        original.append(puzzle)
+
+    extra = []
+    blocks = root.joinpath('tools/new_puzzles.txt').read_text().split('===')
+    assert len(blocks) == 75, f'Expected 75 new puzzles, got {len(blocks)}'
+    for i, block in enumerate(blocks):
+        header, *lines = block.strip().splitlines()
+        difficulty, title = header.split('|', 1)
+        entries = [(norm(line.split('|')[0]), line.split('|')[1]) for line in lines]
+        assert len({word for word, clue in entries}) == len(entries), title
+        assert all(word.isalpha() and len(word) >= 3 and clue for word, clue in entries), title
+        puzzle = existing.get(i + 26) or generate(entries, i + 26)
+        puzzle.update(id=i + 26, title=title, difficulty=int(difficulty))
+        extra.append(puzzle)
+        print(i + 26, title, puzzle['rows'], puzzle['cols'], flush=True)
+
+    levels = []
+    for difficulty in range(1, 6):
+        legacy = [p for p in original if p['difficulty'] == difficulty]
+        added = [p for p in extra if p['difficulty'] == difficulty]
+        assert len(legacy) == 5 and len(added) == 15
+        # Start each 20-level chapter horizontally. Preserve the old puzzle formats.
+        if legacy[0]['type'] == 'arrowword':
+            chapter = added[:1] + legacy + added[1:]
+        else:
+            chapter = legacy + added
+        for puzzle in chapter:
+            kind = 'crossword' if len(levels) % 2 == 0 else 'arrowword'
+            if puzzle['id'] <= 25:
+                assert puzzle['type'] == kind
+            puzzle['type'] = kind
+            levels.append(puzzle)
+    assert len(levels) == 100
+    output.write_text('window.PUZZLES = ' + json.dumps(levels, ensure_ascii=False) + ';\n')
+
+if __name__ == '__main__':
+    build()

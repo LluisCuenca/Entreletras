@@ -1,6 +1,6 @@
 # Entreletras
 
-Web app en español con 25 niveles originales: 13 crucigramas y 12 autodefinidos, alternados. Cinco bloques de dificultad editorial, de vocabulario cotidiano a terminología especializada. La dificultad es orientativa; no está calibrada con jugadores.
+Web app en español con 100 niveles originales: 50 crucigramas y 50 autodefinidos, alternados, con 901 respuestas. Cinco bloques de 20 niveles de dificultad editorial creciente, de vocabulario cotidiano a terminología especializada. La dificultad es orientativa; no está calibrada con jugadores.
 
 ## Jugar
 
@@ -11,7 +11,8 @@ Incluye teclado físico y táctil, pistas dentro del tablero en los autodefinido
 ## Interfaz revisada
 
 - Marca tipográfica, sin símbolo, conservando la tipografía de la cabecera. Iconos de aplicación con la inicial «e.».
-- El recorrido se abre desde la cabecera y agrupa los 25 niveles por dificultad, con nombre, formato y estado.
+- El recorrido se abre desde la cabecera y agrupa los 100 niveles por dificultad, con nombre, formato y estado. Los cinco grupos son desplegables; el grupo del nivel activo aparece abierto.
+- En escritorio la distribución utiliza todo el ancho disponible. El panel de pistas mantiene un ancho proporcional y al ocultarlo el tablero y sus controles se extienden al espacio liberado.
 - La lista de pistas se puede plegar en ordenador y se abre como ventana en móvil. Las definiciones completas siguen visibles bajo el tablero.
 - La altura del tablero se adapta al espacio que dejan el título, la pista y el teclado. Los márgenes vacíos exteriores se recortan visualmente en crucigramas, sin cambiar coordenadas ni partidas.
 - Opciones reúne la ayuda, el reinicio del nivel y la preferencia de teclado. El teclado aparece por defecto en pantallas pequeñas o táctiles y se puede activar también en ordenador.
@@ -37,9 +38,11 @@ El progreso se almacena en el navegador del dispositivo: no se sincroniza entre 
 
 ## Contenido y mantenimiento
 
-`puzzles.js` contiene los 25 tableros completos, con soluciones y definiciones originales. `tools/create_puzzles.py` contiene el texto fuente y genera los cruces de forma determinista. `tools/validate_puzzles.py` comprueba los tableros, sus cruces, conectividad y posiciones de pista; ejecútalo con Python 3. `core.js` contiene las reglas de guardado, edición, deshacer y resolución; ejecuta sus pruebas con `node --test tools/test_core.cjs tools/test_sw.cjs`.
+`puzzles.js` contiene los 100 tableros completos, con soluciones y definiciones originales. `tools/create_puzzles.py` contiene los 25 niveles iniciales y el generador; `tools/new_puzzles.txt` contiene las 75 incorporaciones. El generador reutiliza las cuadrículas publicadas para conservar las partidas. `tools/validate_puzzles.py` comprueba los tableros, sus cruces, conectividad, posiciones de pista, alternancia y orden de dificultad; ejecútalo con Python 3. `core.js` contiene las reglas de guardado, edición, deshacer y resolución; ejecuta sus pruebas con `node --test tools/test_core.cjs tools/test_sw.cjs`.
 
-La revisión conserva los 25 tableros y las 226 respuestas. Se han probado en navegador ambos tipos de juego completos, el recorrido de los 25 niveles, las pistas móviles, la recuperación de la selección y el funcionamiento sin el servidor conectado. Se ha comprobado el diseño a 360, 390 y 1440 píxeles de ancho; esto no sustituye una prueba en dispositivos físicos.
+Los 25 tableros originales y sus 226 respuestas se conservan exactamente. Sus identificadores de guardado siguen siendo los mismos, aunque algunos cambian de número visible al intercalarse los nuevos tableros. La navegación utiliza la posición dentro del recorrido; las partidas usan el identificador estable. Una prueba de regresión verifica la integridad de los 25 tableros originales y la recuperación de sus partidas.
+
+Verificación de esta ampliación: 100 tableros y 901 respuestas validados, diez pruebas de reglas y caché superadas, navegación completa del nivel 1 al 100 en navegador y revisión visual a 1920, 2560 y 390 píxeles de ancho. En móvil se ha comprobado también el selector desplegable y la visibilidad de la casilla activa del nivel 100.
 
 `tools/create_icons.py` genera los iconos tipográficos con Pillow y Arial Bold de macOS. No es necesario ejecutar este script para publicar ni para jugar.
 

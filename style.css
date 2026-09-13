@@ -1,4 +1,4 @@
-:root{
+:root {
   --ink:#183735;
   --muted:#66726a;
   --paper:#f5f4ee;
@@ -10,774 +10,1065 @@
   color:var(--ink);
   background:var(--paper);
   font-synthesis:none;
-  color-scheme:light}
-  *{
-    box-sizing:border-box}
-    body{
-      margin:0}
-      button,a,input{
-        -webkit-tap-highlight-color:transparent}
-        button{
-          font:inherit;
-          color:inherit;
-          cursor:pointer;
-          touch-action:manipulation}
-          button:disabled{
-            opacity:.38;
-            cursor:default}
-            button:focus-visible,a:focus-visible,summary:focus-visible,[tabindex]:focus-visible,input:focus-visible{
-              outline:3px solid #3875bc;
-              outline-offset:3px}
-              button{
-                border:0;
-                background:transparent}
-                a{
-                  color:inherit}
-                  [hidden]{
-                    display:none!important}
-                    .skip-link{
-                      position:absolute;
-                      left:16px;
-                      top:-100px;
-                      z-index:10;
-                      padding:12px;
-                      background:white}
-                      .skip-link:focus{
-                        top:10px}
-                        .topbar{
-                          height:78px;
-                          padding:0 clamp(20px,4vw,64px);
-                          display:flex;
-                          align-items:center;
-                          gap:24px;
-                          border-bottom:1px solid var(--line)}
-                          .brand{
-                            color:var(--ink);
-                            text-decoration:none;
-                            font-weight:800;
-                            letter-spacing:-1.3px;
-                            font-size:31px;
-                            line-height:1}
-                            .brand span{
-                              color:#6d823f}
-                              .edition{
-                                color:var(--muted);
-                                font-size:14px;
-                                margin-left:12px}
-                                .levels-button{
-                                  display:flex;
-                                  align-items:center;
-                                  gap:18px;
-                                  margin-left:auto;
-                                  border:1px solid #cdd3c4;
-                                  border-radius:30px;
-                                  padding:11px 17px;
-                                  min-height:44px;
-                                  font-size:14px}
-                                  .levels-button:hover{
-                                    background:#e9eddc}
-                                    #total-completed{
-                                      font-variant-numeric:tabular-nums;
-                                      font-size:12px;
-                                      color:var(--muted)}
-                                      main{
-                                        max-width:1500px;
-                                        margin:0 auto;
-                                        padding:26px clamp(20px,4vw,64px) 18px;
-                                        outline:none}
-                                        .game-heading{
-                                          display:flex;
-                                          align-items:center;
-                                          gap:16px;
-                                          margin-bottom:22px}
-                                          .title-group{
-                                            min-width:0}
-                                            .eyebrow{
-                                              font-size:11px;
-                                              font-weight:700;
-                                              letter-spacing:1.6px;
-                                              color:#5f725d}
-                                              .game-heading h1{
-                                                font-family:Georgia,serif;
-                                                font-weight:400;
-                                                font-size:clamp(27px,2.6vw,37px);
-                                                letter-spacing:-.8px;
-                                                line-height:1.15;
-                                                margin:7px 0 0}
-                                                .level-navigation{
-                                                  display:flex;
-                                                  gap:3px;
-                                                  margin-left:8px}
-                                                  .icon-button{
-                                                    min-width:42px;
-                                                    height:42px;
-                                                    font-size:25px;
-                                                    border-radius:50%;
-                                                    flex-shrink:0}
-                                                    .icon-button:hover{
-                                                      background:#e6eadc}
-                                                      .difficulty{
-                                                        margin-left:auto;
-                                                        font-size:13px;
-                                                        color:#526940;
-                                                        white-space:nowrap;
-                                                        border:1px solid #d8e0c9;
-                                                        border-radius:22px;
-                                                        padding:9px 14px;
-                                                        background:#eef2e5}
-                                                        .workspace{
-                                                          display:grid;
-                                                          grid-template-columns:minmax(0,1fr) 320px;
-                                                          gap:32px;
-                                                          align-items:start}
-                                                          .workspace.clues-hidden{
-                                                            grid-template-columns:minmax(0,1fr);
-                                                            max-width:1080px;
-                                                            margin:auto}
-                                                            .play-area{
-                                                              min-width:0}
-                                                              .game-toolbar{
-                                                                display:flex;
-                                                                gap:8px;
-                                                                align-items:center;
-                                                                justify-content:space-between;
-                                                                margin-bottom:10px;
-                                                                min-height:36px}
-                                                                .fill-count{
-                                                                  color:var(--muted);
-                                                                  font-size:13px;
-                                                                  font-variant-numeric:tabular-nums;
-                                                                  white-space:nowrap}
-                                                                  .toolbar-buttons{
-                                                                    display:flex;
-                                                                    align-items:center;
-                                                                    gap:1px}
-                                                                    .tool-button{
-                                                                      min-height:36px;
-                                                                      min-width:35px;
-                                                                      padding:6px 9px;
-                                                                      font-size:14px;
-                                                                      border-radius:5px}
-                                                                      .tool-button:hover,.tool-button[aria-expanded=true]{
-                                                                        background:#e4e9dc}
-                                                                        #zoom-in,#zoom-out{
-                                                                          font-size:21px}
-                                                                          #options{
-                                                                            letter-spacing:2px}
-                                                                            .tool-separator{
-                                                                              height:17px;
-                                                                              border-left:1px solid #cdd3c4;
-                                                                              margin:0 8px}
-                                                                              .board-viewport{
-                                                                                height:clamp(275px,calc(100dvh - 405px),630px);
-                                                                                min-height:180px;
-                                                                                overflow:auto;
-                                                                                overscroll-behavior:contain;
-                                                                                padding:18px;
-                                                                                background:#e9ede2;
-                                                                                border:1px solid #dde3d5;
-                                                                                border-radius:12px;
-                                                                                scrollbar-width:thin;
-                                                                                position:relative;
-                                                                                touch-action:pan-x pan-y pinch-zoom}
-                                                                                .board{
-                                                                                  display:grid;
-                                                                                  gap:2px;
-                                                                                  width:max-content;
-                                                                                  margin:auto;
-                                                                                  background:#25413c;
-                                                                                  border:4px solid #25413c;
-                                                                                  border-radius:4px;
-                                                                                  position:relative}
-                                                                                  .cell{
-                                                                                    width:var(--cell);
-                                                                                    height:var(--cell);
-                                                                                    background:var(--white);
-                                                                                    position:relative;
-                                                                                    padding:0;
-                                                                                    display:flex;
-                                                                                    align-items:center;
-                                                                                    justify-content:center;
-                                                                                    border-radius:1px;
-                                                                                    font-weight:600;
-                                                                                    font-size:calc(var(--cell)*.48);
-                                                                                    user-select:none}
-                                                                                    .cell.block{
-                                                                                      background:#25413c}
-                                                                                      .number{
-                                                                                        position:absolute;
-                                                                                        left:3px;
-                                                                                        top:2px;
-                                                                                        font-size:10px;
-                                                                                        font-weight:400;
-                                                                                        line-height:1}
-                                                                                        .cell.related{
-                                                                                          background:#e6efcb}
-                                                                                          .cell.selected{
-                                                                                            background:var(--lime);
-                                                                                            box-shadow:inset 0 0 0 2px #738c34;
-                                                                                            z-index:1}
-                                                                                            .cell.selected:after{
-                                                                                              content:'';
-                                                                                              position:absolute;
-                                                                                              height:2px;
-                                                                                              background:#5a722b;
-                                                                                              width:40%;
-                                                                                              bottom:5px;
-                                                                                              left:30%}
-                                                                                              .cell.error{
-                                                                                                background:#ffe2d9;
-                                                                                                color:#9b2e1f}
-                                                                                                .cell.error:before{
-                                                                                                  content:'!';
-                                                                                                  position:absolute;
-                                                                                                  right:2px;
-                                                                                                  top:1px;
-                                                                                                  font-size:10px}
-                                                                                                  .cell.correct .letter{
-                                                                                                    color:#426624}
-                                                                                                    .cell.clue-cell{
-                                                                                                      background:#d2ddbf;
-                                                                                                      display:flex;
-                                                                                                      flex-direction:column;
-                                                                                                      overflow:hidden;
-                                                                                                      gap:0}
-                                                                                                      .clue-trigger{
-                                                                                                        width:100%;
-                                                                                                        flex:1;
-                                                                                                        min-height:0;
-                                                                                                        padding:4px;
-                                                                                                        text-align:left;
-                                                                                                        font-size:clamp(10px,calc(var(--cell)*.18),13px);
-                                                                                                        line-height:1.17;
-                                                                                                        overflow:hidden}
-                                                                                                        .clue-trigger+ .clue-trigger{
-                                                                                                          border-top:1px solid #9fae8c}
-                                                                                                          .clue-trigger span{
-                                                                                                            display:-webkit-box;
-                                                                                                            -webkit-line-clamp:3;
-                                                                                                            -webkit-box-orient:vertical;
-                                                                                                            overflow:hidden;
-                                                                                                            overflow-wrap:anywhere}
-                                                                                                            .clue-trigger b{
-                                                                                                              font-size:12px;
-                                                                                                              white-space:nowrap}
-                                                                                                              .clue-trigger[aria-pressed=true]{
-                                                                                                                background:#bbd28e}
-                                                                                                                .board-guidance{
-                                                                                                                  height:24px;
-                                                                                                                  display:flex;
-                                                                                                                  align-items:center;
-                                                                                                                  justify-content:center;
-                                                                                                                  font-size:11px;
-                                                                                                                  color:var(--muted)}
-                                                                                                                  .play-dock{
-                                                                                                                    max-width:880px;
-                                                                                                                    margin:0 auto}
-                                                                                                                    .active-clue{
-                                                                                                                      display:flex;
-                                                                                                                      align-items:stretch;
-                                                                                                                      background:var(--ink);
-                                                                                                                      color:var(--white);
-                                                                                                                      border-radius:9px;
-                                                                                                                      min-height:82px}
-                                                                                                                      .active-clue>div{
-                                                                                                                        flex:1;
-                                                                                                                        min-width:0;
-                                                                                                                        padding:13px 8px}
-                                                                                                                        .active-clue button{
-                                                                                                                          width:42px;
-                                                                                                                          min-height:44px;
-                                                                                                                          flex-shrink:0;
-                                                                                                                          color:var(--lime);
-                                                                                                                          font-size:27px;
-                                                                                                                          border-radius:8px}
-                                                                                                                          .active-clue button:hover{
-                                                                                                                            background:#294b45}
-                                                                                                                            .active-clue span{
-                                                                                                                              font-size:10px;
-                                                                                                                              letter-spacing:1.1px;
-                                                                                                                              color:var(--lime);
-                                                                                                                              font-weight:600}
-                                                                                                                              .active-clue p{
-                                                                                                                                font-size:16px;
-                                                                                                                                line-height:1.4;
-                                                                                                                                margin:6px 0 0}
-                                                                                                                                .actions{
-                                                                                                                                  display:flex;
-                                                                                                                                  justify-content:center;
-                                                                                                                                  gap:8px;
-                                                                                                                                  padding:8px 0 3px}
-                                                                                                                                  .action-button{
-                                                                                                                                    min-height:38px;
-                                                                                                                                    padding:8px 13px;
-                                                                                                                                    border-radius:6px;
-                                                                                                                                    font-size:13px}
-                                                                                                                                    .action-button:hover{
-                                                                                                                                      background:#e4e9da}
-                                                                                                                                      #hint{
-                                                                                                                                        background:#e7eccf}
-                                                                                                                                        #hint-count{
-                                                                                                                                          font-size:11px;
-                                                                                                                                          margin-left:5px}
-                                                                                                                                          .keyboard{
-                                                                                                                                            margin:8px auto 0;
-                                                                                                                                            max-width:590px;
-                                                                                                                                            user-select:none}
-                                                                                                                                            .key-row{
-                                                                                                                                              display:flex;
-                                                                                                                                              justify-content:center;
-                                                                                                                                              gap:5px;
-                                                                                                                                              margin-bottom:5px}
-                                                                                                                                              .key{
-                                                                                                                                                height:43px;
-                                                                                                                                                min-width:0;
-                                                                                                                                                flex:1;
-                                                                                                                                                max-width:52px;
-                                                                                                                                                border:1px solid #d3dac9;
-                                                                                                                                                border-bottom-width:2px;
-                                                                                                                                                border-radius:6px;
-                                                                                                                                                background:#e3e8da;
-                                                                                                                                                font-size:15px;
-                                                                                                                                                font-weight:600}
-                                                                                                                                                .key.wide{
-                                                                                                                                                  flex:1.45;
-                                                                                                                                                  max-width:75px}
-                                                                                                                                                  .key:active{
-                                                                                                                                                    background:var(--lime);
-                                                                                                                                                    transform:translateY(1px)}
-                                                                                                                                                    .status{
-                                                                                                                                                      min-height:18px;
-                                                                                                                                                      font-size:12px;
-                                                                                                                                                      color:var(--muted);
-                                                                                                                                                      text-align:center;
-                                                                                                                                                      line-height:1.45;
-                                                                                                                                                      margin:9px 0 0}
-                                                                                                                                                      .clues-panel{
-                                                                                                                                                        border-left:1px solid var(--line);
-                                                                                                                                                        padding-left:28px;
-                                                                                                                                                        min-width:0}
-                                                                                                                                                        .panel-heading{
-                                                                                                                                                          display:flex;
-                                                                                                                                                          align-items:center;
-                                                                                                                                                          gap:10px;
-                                                                                                                                                          justify-content:space-between}
-                                                                                                                                                          .panel-heading h2{
-                                                                                                                                                            font:400 26px/1.2 Georgia,serif;
-                                                                                                                                                            margin:9px 0 0}
-                                                                                                                                                            .clue-list{
-                                                                                                                                                              max-height:calc(100dvh - 340px);
-                                                                                                                                                              overflow:auto;
-                                                                                                                                                              overscroll-behavior:contain;
-                                                                                                                                                              padding:3px 6px 10px 0;
-                                                                                                                                                              scrollbar-width:thin;
-                                                                                                                                                              margin-top:15px}
-                                                                                                                                                              .clue-group{
-                                                                                                                                                                font-size:11px;
-                                                                                                                                                                letter-spacing:1.2px;
-                                                                                                                                                                margin:19px 0 10px;
-                                                                                                                                                                color:#677857}
-                                                                                                                                                                .clue-item{
-                                                                                                                                                                  display:flex;
-                                                                                                                                                                  gap:11px;
-                                                                                                                                                                  width:100%;
-                                                                                                                                                                  text-align:left;
-                                                                                                                                                                  border-radius:7px;
-                                                                                                                                                                  padding:11px 9px;
-                                                                                                                                                                  font-size:14px;
-                                                                                                                                                                  line-height:1.45;
-                                                                                                                                                                  margin:2px 0}
-                                                                                                                                                                  .clue-item:hover{
-                                                                                                                                                                    background:#e9eddf}
-                                                                                                                                                                    .clue-item.selected{
-                                                                                                                                                                      background:#e2ebcb}
-                                                                                                                                                                      .clue-item.done{
-                                                                                                                                                                        color:#526d34}
-                                                                                                                                                                        .clue-item b{
-                                                                                                                                                                          font-size:12px;
-                                                                                                                                                                          flex-shrink:0;
-                                                                                                                                                                          min-width:24px;
-                                                                                                                                                                          padding-top:2px}
-                                                                                                                                                                          .clue-item small{
-                                                                                                                                                                            color:var(--muted);
-                                                                                                                                                                            white-space:nowrap;
-                                                                                                                                                                            font-size:11px}
-                                                                                                                                                                            .panel-note{
-                                                                                                                                                                              font-size:12px;
-                                                                                                                                                                              color:var(--muted);
-                                                                                                                                                                              line-height:1.5;
-                                                                                                                                                                              border-top:1px solid var(--line);
-                                                                                                                                                                              padding-top:15px;
-                                                                                                                                                                              margin-top:15px}
-                                                                                                                                                                              .save-warning{
-                                                                                                                                                                                background:#fff0d9;
-                                                                                                                                                                                color:#724d16;
-                                                                                                                                                                                border:1px solid #e9ce9d;
-                                                                                                                                                                                border-radius:7px;
-                                                                                                                                                                                padding:12px;
-                                                                                                                                                                                font-size:14px;
-                                                                                                                                                                                margin:12px 0}
-                                                                                                                                                                                dialog{
-                                                                                                                                                                                  border:1px solid #dce1d4;
-                                                                                                                                                                                  border-radius:16px;
-                                                                                                                                                                                  background:var(--paper);
-                                                                                                                                                                                  color:var(--ink);
-                                                                                                                                                                                  padding:32px;
-                                                                                                                                                                                  max-width:530px;
-                                                                                                                                                                                  width:calc(100% - 28px);
-                                                                                                                                                                                  max-height:calc(100dvh - 32px);
-                                                                                                                                                                                  box-shadow:0 20px 100px #142f3033;
-                                                                                                                                                                                  overscroll-behavior:contain}
-                                                                                                                                                                                  dialog::backdrop{
-                                                                                                                                                                                    background:#142e2e77;
-                                                                                                                                                                                    backdrop-filter:blur(4px)}
-                                                                                                                                                                                    .modal-close{
-                                                                                                                                                                                      position:absolute;
-                                                                                                                                                                                      right:12px;
-                                                                                                                                                                                      top:10px;
-                                                                                                                                                                                      font-size:26px}
-                                                                                                                                                                                      dialog h2{
-                                                                                                                                                                                        font:400 31px/1.15 Georgia,serif;
-                                                                                                                                                                                        letter-spacing:-.6px;
-                                                                                                                                                                                        margin:8px 30px 20px 0}
-                                                                                                                                                                                        dialog p,dialog li{
-                                                                                                                                                                                          font-size:15px;
-                                                                                                                                                                                          line-height:1.6}
-                                                                                                                                                                                          dialog ul{
-                                                                                                                                                                                            padding-left:20px}
-                                                                                                                                                                                            dialog .eyebrow{
-                                                                                                                                                                                              margin-top:8px}
-                                                                                                                                                                                              dialog .clue-list{
-                                                                                                                                                                                                max-height:none;
-                                                                                                                                                                                                overflow:visible}
-                                                                                                                                                                                                .primary{
-                                                                                                                                                                                                  background:var(--ink);
-                                                                                                                                                                                                  color:var(--lime);
-                                                                                                                                                                                                  border-radius:7px;
-                                                                                                                                                                                                  min-height:46px;
-                                                                                                                                                                                                  padding:12px 20px;
-                                                                                                                                                                                                  width:100%;
-                                                                                                                                                                                                  margin-top:16px;
-                                                                                                                                                                                                  font-size:15px}
-                                                                                                                                                                                                  .secondary{
-                                                                                                                                                                                                    border:1px solid #cbd3c0;
-                                                                                                                                                                                                    border-radius:7px;
-                                                                                                                                                                                                    min-height:44px;
-                                                                                                                                                                                                    padding:10px 16px;
-                                                                                                                                                                                                    font-size:14px}
-                                                                                                                                                                                                    .modal-buttons{
-                                                                                                                                                                                                      display:flex;
-                                                                                                                                                                                                      gap:10px;
-                                                                                                                                                                                                      margin-top:20px;
-                                                                                                                                                                                                      flex-wrap:wrap}
-                                                                                                                                                                                                      .modal-buttons button{
-                                                                                                                                                                                                        flex:1}
-                                                                                                                                                                                                        .option-row{
-                                                                                                                                                                                                          display:flex;
-                                                                                                                                                                                                          align-items:center;
-                                                                                                                                                                                                          justify-content:space-between;
-                                                                                                                                                                                                          gap:22px;
-                                                                                                                                                                                                          padding:17px 0;
-                                                                                                                                                                                                          border-bottom:1px solid var(--line);
-                                                                                                                                                                                                          font-size:15px;
-                                                                                                                                                                                                          line-height:1.5}
-                                                                                                                                                                                                          .option-row small{
-                                                                                                                                                                                                            display:block;
-                                                                                                                                                                                                            color:var(--muted);
-                                                                                                                                                                                                            font-size:12px;
-                                                                                                                                                                                                            margin-top:3px}
-                                                                                                                                                                                                            .option-row input{
-                                                                                                                                                                                                              width:21px;
-                                                                                                                                                                                                              height:21px;
-                                                                                                                                                                                                              accent-color:#3f6551;
-                                                                                                                                                                                                              flex-shrink:0}
-                                                                                                                                                                                                              .option-link{
-                                                                                                                                                                                                                display:block;
-                                                                                                                                                                                                                text-align:left;
-                                                                                                                                                                                                                width:100%;
-                                                                                                                                                                                                                font-size:15px;
-                                                                                                                                                                                                                min-height:50px;
-                                                                                                                                                                                                                padding:15px 0;
-                                                                                                                                                                                                                border-bottom:1px solid var(--line)}
-                                                                                                                                                                                                                .option-link:hover{
-                                                                                                                                                                                                                  text-decoration:underline}
-                                                                                                                                                                                                                  .fine-print{
-                                                                                                                                                                                                                    font-size:12px!important;
-                                                                                                                                                                                                                    color:var(--muted)}
-                                                                                                                                                                                                                    .journey-progress{
-                                                                                                                                                                                                                      display:flex;
-                                                                                                                                                                                                                      align-items:center;
-                                                                                                                                                                                                                      gap:18px;
-                                                                                                                                                                                                                      margin:0 0 24px;
-                                                                                                                                                                                                                      font-size:13px;
-                                                                                                                                                                                                                      color:var(--muted)}
-                                                                                                                                                                                                                      .journey-progress progress{
-                                                                                                                                                                                                                        flex:1;
-                                                                                                                                                                                                                        height:6px;
-                                                                                                                                                                                                                        border:0;
-                                                                                                                                                                                                                        background:#dfe6d3}
-                                                                                                                                                                                                                        .journey-progress progress::-webkit-progress-bar{
-                                                                                                                                                                                                                          background:#dfe6d3;
-                                                                                                                                                                                                                          border-radius:5px}
-                                                                                                                                                                                                                          .journey-progress progress::-webkit-progress-value{
-                                                                                                                                                                                                                            background:#647c3b;
-                                                                                                                                                                                                                            border-radius:5px}
-                                                                                                                                                                                                                            .level-section{
-                                                                                                                                                                                                                              margin-top:22px}
-                                                                                                                                                                                                                              .level-section h3{
-                                                                                                                                                                                                                                font-size:12px;
-                                                                                                                                                                                                                                font-weight:600;
-                                                                                                                                                                                                                                color:#687952;
-                                                                                                                                                                                                                                display:flex;
-                                                                                                                                                                                                                                justify-content:space-between}
-                                                                                                                                                                                                                                .level-map{
-                                                                                                                                                                                                                                  display:flex;
-                                                                                                                                                                                                                                  flex-direction:column;
-                                                                                                                                                                                                                                  gap:4px}
-                                                                                                                                                                                                                                  .level-button{
-                                                                                                                                                                                                                                    display:flex;
-                                                                                                                                                                                                                                    align-items:center;
-                                                                                                                                                                                                                                    text-align:left;
-                                                                                                                                                                                                                                    gap:15px;
-                                                                                                                                                                                                                                    min-height:59px;
-                                                                                                                                                                                                                                    padding:10px 12px;
-                                                                                                                                                                                                                                    border:1px solid transparent;
-                                                                                                                                                                                                                                    border-radius:9px;
-                                                                                                                                                                                                                                    width:100%;
-                                                                                                                                                                                                                                    background:#eeefe7}
-                                                                                                                                                                                                                                    .level-button:hover{
-                                                                                                                                                                                                                                      border-color:#aab99a}
-                                                                                                                                                                                                                                      .level-button.active{
-                                                                                                                                                                                                                                        background:var(--ink);
-                                                                                                                                                                                                                                        color:white}
-                                                                                                                                                                                                                                        .level-number{
-                                                                                                                                                                                                                                          font:400 21px Georgia,serif;
-                                                                                                                                                                                                                                          min-width:29px;
-                                                                                                                                                                                                                                          font-variant-numeric:tabular-nums}
-                                                                                                                                                                                                                                          .level-info{
-                                                                                                                                                                                                                                            flex:1;
-                                                                                                                                                                                                                                            font-size:14px}
-                                                                                                                                                                                                                                            .level-info small{
-                                                                                                                                                                                                                                              display:block;
-                                                                                                                                                                                                                                              font-size:11px;
-                                                                                                                                                                                                                                              color:var(--muted);
-                                                                                                                                                                                                                                              margin-top:4px}
-                                                                                                                                                                                                                                              .level-button.active small{
-                                                                                                                                                                                                                                                color:#c0cfae}
-                                                                                                                                                                                                                                                .level-state{
-                                                                                                                                                                                                                                                  font-size:12px;
-                                                                                                                                                                                                                                                  color:#5d7540}
-                                                                                                                                                                                                                                                  .level-button.active .level-state{
-                                                                                                                                                                                                                                                    color:var(--lime)}
-                                                                                                                                                                                                                                                    .completion-mark{
-                                                                                                                                                                                                                                                      font:italic 42px Georgia,serif;
-                                                                                                                                                                                                                                                      color:#6a853c;
-                                                                                                                                                                                                                                                      margin:10px 0 18px}
-                                                                                                                                                                                                                                                      .help-section{
-                                                                                                                                                                                                                                                        border-top:1px solid var(--line);
-                                                                                                                                                                                                                                                        padding:14px 0}
-                                                                                                                                                                                                                                                        .help-section summary{
-                                                                                                                                                                                                                                                          font-size:16px;
-                                                                                                                                                                                                                                                          font-weight:600;
-                                                                                                                                                                                                                                                          cursor:pointer;
-                                                                                                                                                                                                                                                          min-height:30px}
-                                                                                                                                                                                                                                                          .help-section p{
-                                                                                                                                                                                                                                                            margin-bottom:0}
-                                                                                                                                                                                                                                                            .board-viewport{
-                                                                                                                                                                                                                                                              display:flex}
-                                                                                                                                                                                                                                                              .board{
-                                                                                                                                                                                                                                                                flex:none}
-                                                                                                                                                                                                                                                                .clue-trigger{
-                                                                                                                                                                                                                                                                  font-weight:400}
-                                                                                                                                                                                                                                                                  .mobile-label{
-                                                                                                                                                                                                                                                                    display:none}
-                                                                                                                                                                                                                                                                    .update-notice{
-                                                                                                                                                                                                                                                                      display:flex;
-                                                                                                                                                                                                                                                                      justify-content:center;
-                                                                                                                                                                                                                                                                      align-items:center;
-                                                                                                                                                                                                                                                                      gap:12px;
-                                                                                                                                                                                                                                                                      font-size:12px;
-                                                                                                                                                                                                                                                                      margin:10px 0 0}
-                                                                                                                                                                                                                                                                      .update-notice button{
-                                                                                                                                                                                                                                                                        border:1px solid #b9c7a4;
-                                                                                                                                                                                                                                                                        border-radius:6px;
-                                                                                                                                                                                                                                                                        padding:8px 12px}
-                                                                                                                                                                                                                                                                        @media(max-width:600px){
-                                                                                                                                                                                                                                                                          .levels-button .desktop-label{
-                                                                                                                                                                                                                                                                            display:none}
-                                                                                                                                                                                                                                                                            .levels-button .mobile-label{
-                                                                                                                                                                                                                                                                              display:inline;
-                                                                                                                                                                                                                                                                              font-size:12px}
-                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                            @media(min-width:901px){
-                                                                                                                                                                                                                                                                              body:not(.keyboard-shown) .board-viewport{
-                                                                                                                                                                                                                                                                                height:clamp(300px,calc(100dvh - 375px),720px)}
-                                                                                                                                                                                                                                                                              }
-                                                                                                                                                                                                                                                                              @media(max-width:1100px) and (min-width:901px){
-                                                                                                                                                                                                                                                                                .workspace{
-                                                                                                                                                                                                                                                                                  grid-template-columns:minmax(0,1fr) 275px;
-                                                                                                                                                                                                                                                                                  gap:20px}
-                                                                                                                                                                                                                                                                                  .clues-panel{
-                                                                                                                                                                                                                                                                                    padding-left:20px}
-                                                                                                                                                                                                                                                                                    main{
-                                                                                                                                                                                                                                                                                      padding-left:24px;
-                                                                                                                                                                                                                                                                                      padding-right:24px}
-                                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                                    @media(max-width:900px){
-                                                                                                                                                                                                                                                                                      .topbar{
-                                                                                                                                                                                                                                                                                        height:65px;
-                                                                                                                                                                                                                                                                                        padding:0 20px}
-                                                                                                                                                                                                                                                                                        .edition{
-                                                                                                                                                                                                                                                                                          display:none}
-                                                                                                                                                                                                                                                                                          main{
-                                                                                                                                                                                                                                                                                            padding:20px 20px 14px}
-                                                                                                                                                                                                                                                                                            .workspace{
-                                                                                                                                                                                                                                                                                              display:block}
-                                                                                                                                                                                                                                                                                              .clues-panel{
-                                                                                                                                                                                                                                                                                                display:none!important}
-                                                                                                                                                                                                                                                                                                .game-heading{
-                                                                                                                                                                                                                                                                                                  margin-bottom:14px}
-                                                                                                                                                                                                                                                                                                  .workspace.clues-hidden{
-                                                                                                                                                                                                                                                                                                    max-width:none}
-                                                                                                                                                                                                                                                                                                    .difficulty{
-                                                                                                                                                                                                                                                                                                      font-size:12px}
-                                                                                                                                                                                                                                                                                                      .board-viewport{
-                                                                                                                                                                                                                                                                                                        height:clamp(230px,calc(100dvh - 430px),630px)}
-                                                                                                                                                                                                                                                                                                      }
-                                                                                                                                                                                                                                                                                                      @media(max-width:600px){
-                                                                                                                                                                                                                                                                                                        .topbar{
-                                                                                                                                                                                                                                                                                                          height:60px;
-                                                                                                                                                                                                                                                                                                          padding:0 16px;
-                                                                                                                                                                                                                                                                                                          gap:12px}
-                                                                                                                                                                                                                                                                                                          .brand{
-                                                                                                                                                                                                                                                                                                            font-size:28px}
-                                                                                                                                                                                                                                                                                                            .levels-button{
-                                                                                                                                                                                                                                                                                                              padding:9px 11px;
-                                                                                                                                                                                                                                                                                                              gap:9px;
-                                                                                                                                                                                                                                                                                                              font-size:12px;
-                                                                                                                                                                                                                                                                                                              min-height:38px}
-                                                                                                                                                                                                                                                                                                              .levels-button>span:first-child{
-                                                                                                                                                                                                                                                                                                                display:none}
-                                                                                                                                                                                                                                                                                                                #total-completed{
-                                                                                                                                                                                                                                                                                                                  font-size:11px}
-                                                                                                                                                                                                                                                                                                                  main{
-                                                                                                                                                                                                                                                                                                                    padding:14px 12px max(10px,env(safe-area-inset-bottom))}
-                                                                                                                                                                                                                                                                                                                    .game-heading{
-                                                                                                                                                                                                                                                                                                                      gap:8px;
-                                                                                                                                                                                                                                                                                                                      margin-bottom:9px;
-                                                                                                                                                                                                                                                                                                                      flex-wrap:wrap}
-                                                                                                                                                                                                                                                                                                                      .game-heading h1{
-                                                                                                                                                                                                                                                                                                                        font-size:27px}
-                                                                                                                                                                                                                                                                                                                        .title-group{
-                                                                                                                                                                                                                                                                                                                          flex:1}
-                                                                                                                                                                                                                                                                                                                          .level-navigation{
-                                                                                                                                                                                                                                                                                                                            margin:0}
-                                                                                                                                                                                                                                                                                                                            .level-navigation .icon-button{
-                                                                                                                                                                                                                                                                                                                              min-width:34px;
-                                                                                                                                                                                                                                                                                                                              height:36px}
-                                                                                                                                                                                                                                                                                                                              .difficulty{
-                                                                                                                                                                                                                                                                                                                                margin-left:0;
-                                                                                                                                                                                                                                                                                                                                font-size:10px;
-                                                                                                                                                                                                                                                                                                                                padding:4px 8px;
-                                                                                                                                                                                                                                                                                                                                border:0;
-                                                                                                                                                                                                                                                                                                                                background:#e8eddc}
-                                                                                                                                                                                                                                                                                                                                .eyebrow{
-                                                                                                                                                                                                                                                                                                                                  font-size:9px;
-                                                                                                                                                                                                                                                                                                                                  letter-spacing:1.2px}
-                                                                                                                                                                                                                                                                                                                                  .game-toolbar{
-                                                                                                                                                                                                                                                                                                                                    margin-bottom:7px;
-                                                                                                                                                                                                                                                                                                                                    gap:4px;
-                                                                                                                                                                                                                                                                                                                                    min-height:36px}
-                                                                                                                                                                                                                                                                                                                                    .fill-count{
-                                                                                                                                                                                                                                                                                                                                      font-size:11px}
-                                                                                                                                                                                                                                                                                                                                      .tool-button{
-                                                                                                                                                                                                                                                                                                                                        min-width:32px;
-                                                                                                                                                                                                                                                                                                                                        padding:5px 7px;
-                                                                                                                                                                                                                                                                                                                                        font-size:12px;
-                                                                                                                                                                                                                                                                                                                                        min-height:36px}
-                                                                                                                                                                                                                                                                                                                                        .tool-separator{
-                                                                                                                                                                                                                                                                                                                                          margin:0 4px}
-                                                                                                                                                                                                                                                                                                                                          .board-viewport{
-                                                                                                                                                                                                                                                                                                                                            height:clamp(200px,calc(100dvh - 464px),560px);
-                                                                                                                                                                                                                                                                                                                                            padding:12px;
-                                                                                                                                                                                                                                                                                                                                            border-radius:9px;
-                                                                                                                                                                                                                                                                                                                                            min-height:150px}
-                                                                                                                                                                                                                                                                                                                                            .board-guidance{
-                                                                                                                                                                                                                                                                                                                                              height:22px;
-                                                                                                                                                                                                                                                                                                                                              font-size:10px}
-                                                                                                                                                                                                                                                                                                                                              .active-clue{
-                                                                                                                                                                                                                                                                                                                                                min-height:74px}
-                                                                                                                                                                                                                                                                                                                                                .active-clue>div{
-                                                                                                                                                                                                                                                                                                                                                  padding:10px 5px}
-                                                                                                                                                                                                                                                                                                                                                  .active-clue p{
-                                                                                                                                                                                                                                                                                                                                                    font-size:14px;
-                                                                                                                                                                                                                                                                                                                                                    line-height:1.35;
-                                                                                                                                                                                                                                                                                                                                                    margin-top:5px}
-                                                                                                                                                                                                                                                                                                                                                    .active-clue span{
-                                                                                                                                                                                                                                                                                                                                                      font-size:9px;
-                                                                                                                                                                                                                                                                                                                                                      letter-spacing:.7px}
-                                                                                                                                                                                                                                                                                                                                                      .active-clue button{
-                                                                                                                                                                                                                                                                                                                                                        width:32px}
-                                                                                                                                                                                                                                                                                                                                                        .actions{
-                                                                                                                                                                                                                                                                                                                                                          gap:3px;
-                                                                                                                                                                                                                                                                                                                                                          padding:5px 0 0}
-                                                                                                                                                                                                                                                                                                                                                          .action-button{
-                                                                                                                                                                                                                                                                                                                                                            padding:7px 9px;
-                                                                                                                                                                                                                                                                                                                                                            font-size:12px;
-                                                                                                                                                                                                                                                                                                                                                            min-height:35px}
-                                                                                                                                                                                                                                                                                                                                                            .keyboard{
-                                                                                                                                                                                                                                                                                                                                                              margin-top:6px}
-                                                                                                                                                                                                                                                                                                                                                              .key-row{
-                                                                                                                                                                                                                                                                                                                                                                gap:4px;
-                                                                                                                                                                                                                                                                                                                                                                margin-bottom:4px}
-                                                                                                                                                                                                                                                                                                                                                                .key{
-                                                                                                                                                                                                                                                                                                                                                                  height:39px;
-                                                                                                                                                                                                                                                                                                                                                                  border-radius:5px;
-                                                                                                                                                                                                                                                                                                                                                                  font-size:14px}
-                                                                                                                                                                                                                                                                                                                                                                  .status{
-                                                                                                                                                                                                                                                                                                                                                                    font-size:11px;
-                                                                                                                                                                                                                                                                                                                                                                    margin-top:6px;
-                                                                                                                                                                                                                                                                                                                                                                    min-height:16px}
-                                                                                                                                                                                                                                                                                                                                                                    body:not(.keyboard-shown) .board-viewport{
-                                                                                                                                                                                                                                                                                                                                                                      height:clamp(300px,calc(100dvh - 333px),740px)}
-                                                                                                                                                                                                                                                                                                                                                                      .number{
-                                                                                                                                                                                                                                                                                                                                                                        font-size:9px}
-                                                                                                                                                                                                                                                                                                                                                                        .modal-close{
-                                                                                                                                                                                                                                                                                                                                                                          right:8px;
-                                                                                                                                                                                                                                                                                                                                                                          top:7px}
-                                                                                                                                                                                                                                                                                                                                                                          dialog{
-                                                                                                                                                                                                                                                                                                                                                                            padding:25px 21px}
-                                                                                                                                                                                                                                                                                                                                                                            dialog h2{
-                                                                                                                                                                                                                                                                                                                                                                              font-size:29px}
-                                                                                                                                                                                                                                                                                                                                                                              .save-warning{
-                                                                                                                                                                                                                                                                                                                                                                                font-size:12px}
-                                                                                                                                                                                                                                                                                                                                                                              }
-                                                                                                                                                                                                                                                                                                                                                                              @media(max-width:370px){
-                                                                                                                                                                                                                                                                                                                                                                                .brand{
-                                                                                                                                                                                                                                                                                                                                                                                  font-size:26px}
-                                                                                                                                                                                                                                                                                                                                                                                  .levels-button{
-                                                                                                                                                                                                                                                                                                                                                                                    gap:6px}
-                                                                                                                                                                                                                                                                                                                                                                                    .fit-button{
-                                                                                                                                                                                                                                                                                                                                                                                      font-size:11px;
-                                                                                                                                                                                                                                                                                                                                                                                      padding-left:4px;
-                                                                                                                                                                                                                                                                                                                                                                                      padding-right:4px}
-                                                                                                                                                                                                                                                                                                                                                                                      .tool-separator{
-                                                                                                                                                                                                                                                                                                                                                                                        margin:0 2px}
-                                                                                                                                                                                                                                                                                                                                                                                        .action-button{
-                                                                                                                                                                                                                                                                                                                                                                                          padding:7px 7px}
-                                                                                                                                                                                                                                                                                                                                                                                          .game-heading h1{
-                                                                                                                                                                                                                                                                                                                                                                                            font-size:25px}
-                                                                                                                                                                                                                                                                                                                                                                                          }
-                                                                                                                                                                                                                                                                                                                                                                                          @media(prefers-reduced-motion:no-preference){
-                                                                                                                                                                                                                                                                                                                                                                                            button{
-                                                                                                                                                                                                                                                                                                                                                                                              transition:background .12s,color .12s}
-                                                                                                                                                                                                                                                                                                                                                                                              dialog[open]{
-                                                                                                                                                                                                                                                                                                                                                                                                animation:appear .16s ease-out}
-                                                                                                                                                                                                                                                                                                                                                                                                @keyframes appear{
-                                                                                                                                                                                                                                                                                                                                                                                                  from{
-                                                                                                                                                                                                                                                                                                                                                                                                    opacity:0;
-                                                                                                                                                                                                                                                                                                                                                                                                    transform:translateY(6px)}
-                                                                                                                                                                                                                                                                                                                                                                                                    to{
-                                                                                                                                                                                                                                                                                                                                                                                                      opacity:1;
-                                                                                                                                                                                                                                                                                                                                                                                                      transform:translateY(0)}
-                                                                                                                                                                                                                                                                                                                                                                                                    }
+  color-scheme:light
+}
+* {
+  box-sizing:border-box
+}
+body {
+  margin:0
+}
+button,a,input {
+  -webkit-tap-highlight-color:transparent
+}
+button {
+  font:inherit;
+  color:inherit;
+  cursor:pointer;
+  touch-action:manipulation
+}
+button:disabled {
+  opacity:.38;
+  cursor:default
+}
+button:focus-visible,a:focus-visible,summary:focus-visible,[tabindex]:focus-visible,input:focus-visible {
+  outline:3px solid #3875bc;
+  outline-offset:3px
+}
+button {
+  border:0;
+  background:transparent
+}
+a {
+  color:inherit
+}
+[hidden] {
+  display:none!important
+}
+.skip-link {
+  position:absolute;
+  left:16px;
+  top:-100px;
+  z-index:10;
+  padding:12px;
+  background:white
+}
+.skip-link:focus {
+  top:10px
+}
+.topbar {
+  height:78px;
+  padding:0 clamp(20px,4vw,64px);
+  display:flex;
+  align-items:center;
+  gap:24px;
+  border-bottom:1px solid var(--line)
+}
+.brand {
+  color:var(--ink);
+  text-decoration:none;
+  font-weight:800;
+  letter-spacing:-1.3px;
+  font-size:31px;
+  line-height:1
+}
+.brand span {
+  color:#6d823f
+}
+.edition {
+  color:var(--muted);
+  font-size:14px;
+  margin-left:12px
+}
+.levels-button {
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-left:auto;
+  border:1px solid #cdd3c4;
+  border-radius:30px;
+  padding:11px 17px;
+  min-height:44px;
+  font-size:14px
+}
+.levels-button:hover {
+  background:#e9eddc
+}
+#total-completed {
+  font-variant-numeric:tabular-nums;
+  font-size:12px;
+  color:var(--muted)
+}
+main {
+  max-width:1500px;
+  margin:0 auto;
+  padding:26px clamp(20px,4vw,64px) 18px;
+  outline:none
+}
+.game-heading {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:22px
+}
+.title-group {
+  min-width:0
+}
+.eyebrow {
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.6px;
+  color:#5f725d
+}
+.game-heading h1 {
+  font-family:Georgia,serif;
+  font-weight:400;
+  font-size:clamp(27px,2.6vw,37px);
+  letter-spacing:-.8px;
+  line-height:1.15;
+  margin:7px 0 0
+}
+.level-navigation {
+  display:flex;
+  gap:3px;
+  margin-left:8px
+}
+.icon-button {
+  min-width:42px;
+  height:42px;
+  font-size:25px;
+  border-radius:50%;
+  flex-shrink:0
+}
+.icon-button:hover {
+  background:#e6eadc
+}
+.difficulty {
+  margin-left:auto;
+  font-size:13px;
+  color:#526940;
+  white-space:nowrap;
+  border:1px solid #d8e0c9;
+  border-radius:22px;
+  padding:9px 14px;
+  background:#eef2e5
+}
+.workspace {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 320px;
+  gap:32px;
+  align-items:start
+}
+.workspace.clues-hidden {
+  grid-template-columns:minmax(0,1fr);
+  max-width:1080px;
+  margin:auto
+}
+.play-area {
+  min-width:0
+}
+.game-toolbar {
+  display:flex;
+  gap:8px;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+  min-height:36px
+}
+.fill-count {
+  color:var(--muted);
+  font-size:13px;
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap
+}
+.toolbar-buttons {
+  display:flex;
+  align-items:center;
+  gap:1px
+}
+.tool-button {
+  min-height:36px;
+  min-width:35px;
+  padding:6px 9px;
+  font-size:14px;
+  border-radius:5px
+}
+.tool-button:hover,.tool-button[aria-expanded=true] {
+  background:#e4e9dc
+}
+#zoom-in,#zoom-out {
+  font-size:21px
+}
+#options {
+  letter-spacing:2px
+}
+.tool-separator {
+  height:17px;
+  border-left:1px solid #cdd3c4;
+  margin:0 8px
+}
+.board-viewport {
+  height:clamp(275px,calc(100dvh - 405px),630px);
+  min-height:180px;
+  overflow:auto;
+  overscroll-behavior:contain;
+  padding:18px;
+  background:#e9ede2;
+  border:1px solid #dde3d5;
+  border-radius:12px;
+  scrollbar-width:thin;
+  position:relative;
+  touch-action:pan-x pan-y pinch-zoom
+}
+.board {
+  display:grid;
+  gap:2px;
+  width:max-content;
+  margin:auto;
+  background:#25413c;
+  border:4px solid #25413c;
+  border-radius:4px;
+  position:relative
+}
+.cell {
+  width:var(--cell);
+  height:var(--cell);
+  background:var(--white);
+  position:relative;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:1px;
+  font-weight:600;
+  font-size:calc(var(--cell)*.48);
+  user-select:none
+}
+.cell.block {
+  background:#25413c
+}
+.number {
+  position:absolute;
+  left:3px;
+  top:2px;
+  font-size:10px;
+  font-weight:400;
+  line-height:1
+}
+.cell.related {
+  background:#e6efcb
+}
+.cell.selected {
+  background:var(--lime);
+  box-shadow:inset 0 0 0 2px #738c34;
+  z-index:1
+}
+.cell.selected:after {
+  content:'';
+  position:absolute;
+  height:2px;
+  background:#5a722b;
+  width:40%;
+  bottom:5px;
+  left:30%
+}
+.cell.error {
+  background:#ffe2d9;
+  color:#9b2e1f
+}
+.cell.error:before {
+  content:'!';
+  position:absolute;
+  right:2px;
+  top:1px;
+  font-size:10px
+}
+.cell.correct .letter {
+  color:#426624
+}
+.cell.clue-cell {
+  background:#d2ddbf;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  gap:0
+}
+.clue-trigger {
+  width:100%;
+  flex:1;
+  min-height:0;
+  padding:4px;
+  text-align:left;
+  font-size:clamp(10px,calc(var(--cell)*.18),13px);
+  line-height:1.17;
+  overflow:hidden
+}
+.clue-trigger+ .clue-trigger {
+  border-top:1px solid #9fae8c
+}
+.clue-trigger span {
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+  overflow-wrap:anywhere
+}
+.clue-trigger b {
+  font-size:12px;
+  white-space:nowrap
+}
+.clue-trigger[aria-pressed=true] {
+  background:#bbd28e
+}
+.board-guidance {
+  height:24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:11px;
+  color:var(--muted)
+}
+.play-dock {
+  max-width:880px;
+  margin:0 auto
+}
+.active-clue {
+  display:flex;
+  align-items:stretch;
+  background:var(--ink);
+  color:var(--white);
+  border-radius:9px;
+  min-height:82px
+}
+.active-clue>div {
+  flex:1;
+  min-width:0;
+  padding:13px 8px
+}
+.active-clue button {
+  width:42px;
+  min-height:44px;
+  flex-shrink:0;
+  color:var(--lime);
+  font-size:27px;
+  border-radius:8px
+}
+.active-clue button:hover {
+  background:#294b45
+}
+.active-clue span {
+  font-size:10px;
+  letter-spacing:1.1px;
+  color:var(--lime);
+  font-weight:600
+}
+.active-clue p {
+  font-size:16px;
+  line-height:1.4;
+  margin:6px 0 0
+}
+.actions {
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  padding:8px 0 3px
+}
+.action-button {
+  min-height:38px;
+  padding:8px 13px;
+  border-radius:6px;
+  font-size:13px
+}
+.action-button:hover {
+  background:#e4e9da
+}
+#hint {
+  background:#e7eccf
+}
+#hint-count {
+  font-size:11px;
+  margin-left:5px
+}
+.keyboard {
+  margin:8px auto 0;
+  max-width:590px;
+  user-select:none
+}
+.key-row {
+  display:flex;
+  justify-content:center;
+  gap:5px;
+  margin-bottom:5px
+}
+.key {
+  height:43px;
+  min-width:0;
+  flex:1;
+  max-width:52px;
+  border:1px solid #d3dac9;
+  border-bottom-width:2px;
+  border-radius:6px;
+  background:#e3e8da;
+  font-size:15px;
+  font-weight:600
+}
+.key.wide {
+  flex:1.45;
+  max-width:75px
+}
+.key:active {
+  background:var(--lime);
+  transform:translateY(1px)
+}
+.status {
+  min-height:18px;
+  font-size:12px;
+  color:var(--muted);
+  text-align:center;
+  line-height:1.45;
+  margin:9px 0 0
+}
+.clues-panel {
+  border-left:1px solid var(--line);
+  padding-left:28px;
+  min-width:0
+}
+.panel-heading {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  justify-content:space-between
+}
+.panel-heading h2 {
+  font:400 26px/1.2 Georgia,serif;
+  margin:9px 0 0
+}
+.clue-list {
+  max-height:calc(100dvh - 340px);
+  overflow:auto;
+  overscroll-behavior:contain;
+  padding:3px 6px 10px 0;
+  scrollbar-width:thin;
+  margin-top:15px
+}
+.clue-group {
+  font-size:11px;
+  letter-spacing:1.2px;
+  margin:19px 0 10px;
+  color:#677857
+}
+.clue-item {
+  display:flex;
+  gap:11px;
+  width:100%;
+  text-align:left;
+  border-radius:7px;
+  padding:11px 9px;
+  font-size:14px;
+  line-height:1.45;
+  margin:2px 0
+}
+.clue-item:hover {
+  background:#e9eddf
+}
+.clue-item.selected {
+  background:#e2ebcb
+}
+.clue-item.done {
+  color:#526d34
+}
+.clue-item b {
+  font-size:12px;
+  flex-shrink:0;
+  min-width:24px;
+  padding-top:2px
+}
+.clue-item small {
+  color:var(--muted);
+  white-space:nowrap;
+  font-size:11px
+}
+.panel-note {
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.5;
+  border-top:1px solid var(--line);
+  padding-top:15px;
+  margin-top:15px
+}
+.save-warning {
+  background:#fff0d9;
+  color:#724d16;
+  border:1px solid #e9ce9d;
+  border-radius:7px;
+  padding:12px;
+  font-size:14px;
+  margin:12px 0
+}
+dialog {
+  border:1px solid #dce1d4;
+  border-radius:16px;
+  background:var(--paper);
+  color:var(--ink);
+  padding:32px;
+  max-width:530px;
+  width:calc(100% - 28px);
+  max-height:calc(100dvh - 32px);
+  box-shadow:0 20px 100px #142f3033;
+  overscroll-behavior:contain
+}
+dialog::backdrop {
+  background:#142e2e77;
+  backdrop-filter:blur(4px)
+}
+.modal-close {
+  position:absolute;
+  right:12px;
+  top:10px;
+  font-size:26px
+}
+dialog h2 {
+  font:400 31px/1.15 Georgia,serif;
+  letter-spacing:-.6px;
+  margin:8px 30px 20px 0
+}
+dialog p,dialog li {
+  font-size:15px;
+  line-height:1.6
+}
+dialog ul {
+  padding-left:20px
+}
+dialog .eyebrow {
+  margin-top:8px
+}
+dialog .clue-list {
+  max-height:none;
+  overflow:visible
+}
+.primary {
+  background:var(--ink);
+  color:var(--lime);
+  border-radius:7px;
+  min-height:46px;
+  padding:12px 20px;
+  width:100%;
+  margin-top:16px;
+  font-size:15px
+}
+.secondary {
+  border:1px solid #cbd3c0;
+  border-radius:7px;
+  min-height:44px;
+  padding:10px 16px;
+  font-size:14px
+}
+.modal-buttons {
+  display:flex;
+  gap:10px;
+  margin-top:20px;
+  flex-wrap:wrap
+}
+.modal-buttons button {
+  flex:1
+}
+.option-row {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+  padding:17px 0;
+  border-bottom:1px solid var(--line);
+  font-size:15px;
+  line-height:1.5
+}
+.option-row small {
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:3px
+}
+.option-row input {
+  width:21px;
+  height:21px;
+  accent-color:#3f6551;
+  flex-shrink:0
+}
+.option-link {
+  display:block;
+  text-align:left;
+  width:100%;
+  font-size:15px;
+  min-height:50px;
+  padding:15px 0;
+  border-bottom:1px solid var(--line)
+}
+.option-link:hover {
+  text-decoration:underline
+}
+.fine-print {
+  font-size:12px!important;
+  color:var(--muted)
+}
+.journey-progress {
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin:0 0 24px;
+  font-size:13px;
+  color:var(--muted)
+}
+.journey-progress progress {
+  flex:1;
+  height:6px;
+  border:0;
+  background:#dfe6d3
+}
+.journey-progress progress::-webkit-progress-bar {
+  background:#dfe6d3;
+  border-radius:5px
+}
+.journey-progress progress::-webkit-progress-value {
+  background:#647c3b;
+  border-radius:5px
+}
+.level-section {
+  margin-top:22px
+}
+.level-section h3 {
+  font-size:12px;
+  font-weight:600;
+  color:#687952;
+  display:flex;
+  justify-content:space-between
+}
+.level-map {
+  display:flex;
+  flex-direction:column;
+  gap:4px
+}
+.level-button {
+  display:flex;
+  align-items:center;
+  text-align:left;
+  gap:15px;
+  min-height:59px;
+  padding:10px 12px;
+  border:1px solid transparent;
+  border-radius:9px;
+  width:100%;
+  background:#eeefe7
+}
+.level-button:hover {
+  border-color:#aab99a
+}
+.level-button.active {
+  background:var(--ink);
+  color:white
+}
+.level-number {
+  font:400 21px Georgia,serif;
+  min-width:29px;
+  font-variant-numeric:tabular-nums
+}
+.level-info {
+  flex:1;
+  font-size:14px
+}
+.level-info small {
+  display:block;
+  font-size:11px;
+  color:var(--muted);
+  margin-top:4px
+}
+.level-button.active small {
+  color:#c0cfae
+}
+.level-state {
+  font-size:12px;
+  color:#5d7540
+}
+.level-button.active .level-state {
+  color:var(--lime)
+}
+.completion-mark {
+  font:italic 42px Georgia,serif;
+  color:#6a853c;
+  margin:10px 0 18px
+}
+.help-section {
+  border-top:1px solid var(--line);
+  padding:14px 0
+}
+.help-section summary {
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  min-height:30px
+}
+.help-section p {
+  margin-bottom:0
+}
+.board-viewport {
+  display:flex
+}
+.board {
+  flex:none
+}
+.clue-trigger {
+  font-weight:400
+}
+.mobile-label {
+  display:none
+}
+.update-notice {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  font-size:12px;
+  margin:10px 0 0
+}
+.update-notice button {
+  border:1px solid #b9c7a4;
+  border-radius:6px;
+  padding:8px 12px
+}
+@media(max-width:600px) {
+  .levels-button .desktop-label {
+    display:none
+  }
+  .levels-button .mobile-label {
+    display:inline;
+    font-size:12px
+  }
+}
+@media(min-width:901px) {
+  body:not(.keyboard-shown) .board-viewport {
+    height:clamp(300px,calc(100dvh - 375px),720px)
+  }
+}
+@media(max-width:1100px) and (min-width:901px) {
+  .workspace {
+    grid-template-columns:minmax(0,1fr) 275px;
+    gap:20px
+  }
+  .clues-panel {
+    padding-left:20px
+  }
+  main {
+    padding-left:24px;
+    padding-right:24px
+  }
+}
+@media(max-width:900px) {
+  .topbar {
+    height:65px;
+    padding:0 20px
+  }
+  .edition {
+    display:none
+  }
+  main {
+    padding:20px 20px 14px
+  }
+  .workspace {
+    display:block
+  }
+  .clues-panel {
+    display:none!important
+  }
+  .game-heading {
+    margin-bottom:14px
+  }
+  .workspace.clues-hidden {
+    max-width:none
+  }
+  .difficulty {
+    font-size:12px
+  }
+  .board-viewport {
+    height:clamp(230px,calc(100dvh - 430px),630px)
+  }
+}
+@media(max-width:600px) {
+  .topbar {
+    height:60px;
+    padding:0 16px;
+    gap:12px
+  }
+  .brand {
+    font-size:28px
+  }
+  .levels-button {
+    padding:9px 11px;
+    gap:9px;
+    font-size:12px;
+    min-height:38px
+  }
+  .levels-button>span:first-child {
+    display:none
+  }
+  #total-completed {
+    font-size:11px
+  }
+  main {
+    padding:14px 12px max(10px,env(safe-area-inset-bottom))
+  }
+  .game-heading {
+    gap:8px;
+    margin-bottom:9px;
+    flex-wrap:wrap
+  }
+  .game-heading h1 {
+    font-size:27px
+  }
+  .title-group {
+    flex:1
+  }
+  .level-navigation {
+    margin:0
+  }
+  .level-navigation .icon-button {
+    min-width:34px;
+    height:36px
+  }
+  .difficulty {
+    margin-left:0;
+    font-size:10px;
+    padding:4px 8px;
+    border:0;
+    background:#e8eddc
+  }
+  .eyebrow {
+    font-size:9px;
+    letter-spacing:1.2px
+  }
+  .game-toolbar {
+    margin-bottom:7px;
+    gap:4px;
+    min-height:36px
+  }
+  .fill-count {
+    font-size:11px
+  }
+  .tool-button {
+    min-width:32px;
+    padding:5px 7px;
+    font-size:12px;
+    min-height:36px
+  }
+  .tool-separator {
+    margin:0 4px
+  }
+  .board-viewport {
+    height:clamp(200px,calc(100dvh - 464px),560px);
+    padding:12px;
+    border-radius:9px;
+    min-height:150px
+  }
+  .board-guidance {
+    height:22px;
+    font-size:10px
+  }
+  .active-clue {
+    min-height:74px
+  }
+  .active-clue>div {
+    padding:10px 5px
+  }
+  .active-clue p {
+    font-size:14px;
+    line-height:1.35;
+    margin-top:5px
+  }
+  .active-clue span {
+    font-size:9px;
+    letter-spacing:.7px
+  }
+  .active-clue button {
+    width:32px
+  }
+  .actions {
+    gap:3px;
+    padding:5px 0 0
+  }
+  .action-button {
+    padding:7px 9px;
+    font-size:12px;
+    min-height:35px
+  }
+  .keyboard {
+    margin-top:6px
+  }
+  .key-row {
+    gap:4px;
+    margin-bottom:4px
+  }
+  .key {
+    height:39px;
+    border-radius:5px;
+    font-size:14px
+  }
+  .status {
+    font-size:11px;
+    margin-top:6px;
+    min-height:16px
+  }
+  body:not(.keyboard-shown) .board-viewport {
+    height:clamp(300px,calc(100dvh - 333px),740px)
+  }
+  .number {
+    font-size:9px
+  }
+  .modal-close {
+    right:8px;
+    top:7px
+  }
+  dialog {
+    padding:25px 21px
+  }
+  dialog h2 {
+    font-size:29px
+  }
+  .save-warning {
+    font-size:12px
+  }
+}
+@media(max-width:370px) {
+  .brand {
+    font-size:26px
+  }
+  .levels-button {
+    gap:6px
+  }
+  .fit-button {
+    font-size:11px;
+    padding-left:4px;
+    padding-right:4px
+  }
+  .tool-separator {
+    margin:0 2px
+  }
+  .action-button {
+    padding:7px 7px
+  }
+  .game-heading h1 {
+    font-size:25px
+  }
+}
+@media(prefers-reduced-motion:no-preference) {
+  button {
+    transition:background .12s,color .12s
+  }
+  dialog[open] {
+    animation:appear .16s ease-out
+  }
+  @keyframes appear {
+    from {
+      opacity:0;
+      transform:translateY(6px)
+    }
+    to {
+      opacity:1;
+      transform:translateY(0)
+    }
+  }
+}
+
+/* Wide desktop layout: the puzzle, controls and clues share the available screen. */
+@media (min-width: 901px) {
+  .topbar {
+    padding-inline: clamp(24px, 2vw, 48px);
+  }
+  main {
+    max-width: none;
+    padding-inline: clamp(24px, 2vw, 48px);
+  }
+  .workspace {
+    grid-template-columns: minmax(0, 1fr) clamp(300px, 25vw, 540px);
+    gap: clamp(24px, 2vw, 48px);
+  }
+  .workspace.clues-hidden {
+    max-width: none;
+    width: 100%;
+  }
+  .play-dock {
+    max-width: none;
+  }
+  .keyboard {
+    max-width: 940px;
+  }
+  .key {
+    max-width: none;
+  }
+  .key.wide {
+    max-width: none;
+  }
+  .clues-panel {
+    padding-left: clamp(24px, 2vw, 40px);
+  }
+  .clue-item {
+    font-size: 15px;
+    padding-block: 13px;
+  }
+}
+.journey-dialog {
+  max-width: 780px;
+}
+.level-section {
+  border-top: 1px solid var(--line);
+  margin-top: 0;
+}
+.level-section > summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  list-style: none;
+}
+.level-section > summary::-webkit-details-marker {
+  display: none;
+}
+.level-section > summary::after {
+  content: '+';
+  font-size: 22px;
+  font-weight: 400;
+}
+.level-section[open] > summary::after {
+  content: '−';
+}
+.level-section > summary small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+.chapter-count {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.level-map {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+  padding-bottom: 22px;
+}
+.level-button {
+  min-width: 0;
+  gap: 10px;
+}
+.level-number {
+  min-width: 34px;
+}
+@media (max-width: 600px) {
+  .level-map {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
